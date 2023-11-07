@@ -1,5 +1,28 @@
-$main-color: grey;
 
-.location {
-    background-color:$main-color;
+$main-color:white;
+$second-color: rgb(247,247,247);
+$third-color: #353535;
+
+/*COLORS*/
+.button-exploration-and-command,
+.div_functioning-order span,
+.footer a,
+.footer-title {
+    color: $main-color;
+}
+
+.section_menu-selection p {
+    color:$third-color;
+}
+
+/*BACKGROUND-COLOR*/
+
+.section_menu-selection,
+.div_functioning-order,
+.section_restaurants {
+    background-color: $second-color;
+}
+
+.footer {
+    background-color: $third-color;
 }

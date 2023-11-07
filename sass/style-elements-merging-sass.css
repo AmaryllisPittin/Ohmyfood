@@ -1,0 +1,14 @@
+.header,
+.section_location,
+.section_menu-selection {
+  display: flex;
+  justify-content: center;
+}
+
+.section_menu-selection,
+.section_functioning,
+.section_restaurants,
+.footer {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=style-elements-merging-sass.css.map */

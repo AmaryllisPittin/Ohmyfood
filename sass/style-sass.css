@@ -1,3 +1,22 @@
-.location {
-  background-color: grey;
+/*COLORS*/
+.button-exploration-and-command,
+.div_functioning-order span,
+.footer a,
+.footer-title {
+  color: white;
+}
+
+.section_menu-selection p {
+  color: #353535;
+}
+
+/*BACKGROUND-COLOR*/
+.section_menu-selection,
+.div_functioning-order,
+.section_restaurants {
+  background-color: rgb(247, 247, 247);
+}
+
+.footer {
+  background-color: #353535;
 }/*# sourceMappingURL=style-sass.css.map */
