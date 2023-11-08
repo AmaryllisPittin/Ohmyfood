@@ -6,6 +6,22 @@
   color: white;
 }
 
+.fa-mobile-screen-button,
+.fa-list-ul,
+.fa-store {
+  color: #7E7E7E;
+}
+
+.fa-heart,
+.fa-location-dot {
+  color: black;
+}
+
+.fa-utensils,
+.fa-handshake-angle {
+  color: white;
+}
+
 .section_menu-selection p {
   color: #353535;
 }

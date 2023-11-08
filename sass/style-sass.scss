@@ -3,12 +3,32 @@ $main-color:white;
 $second-color: rgb(247,247,247);
 $third-color: #353535;
 
+$main-color-fa-icon: #7E7E7E;
+$second-color-fa-icon:black;
+$third-color-fa-icon:white;
+
 /*COLORS*/
 .button-exploration-and-command,
 .div_functioning-order span,
 .footer a,
 .footer-title {
     color: $main-color;
+}
+
+.fa-mobile-screen-button,
+.fa-list-ul,
+.fa-store {
+    color: $main-color-fa-icon;
+}
+
+.fa-heart,
+.fa-location-dot {
+    color:$second-color-fa-icon;
+}
+
+.fa-utensils,
+.fa-handshake-angle {
+    color: $third-color-fa-icon;
 }
 
 .section_menu-selection p {

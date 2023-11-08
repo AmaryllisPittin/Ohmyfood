@@ -11,4 +11,21 @@
 .footer {
   display: flex;
   flex-direction: column;
+}
+
+.section_location,
+.section_menu-selection {
+  align-items: center;
+}
+
+.header,
+.section_location,
+.div_functioning-order span,
+.div_restaurants-cards .cards {
+  position: relative;
+}
+
+.div_restaurants-cards .span_new,
+.fa-heart {
+  position: absolute;
 }/*# sourceMappingURL=style-elements-merging-sass.css.map */

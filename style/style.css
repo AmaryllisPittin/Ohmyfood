@@ -7,7 +7,6 @@
 }
 
 .cards {
-    box-sizing:border-box;
     background-color:white;
     border-radius:15px;
 }
@@ -17,11 +16,13 @@
 }
 
 .div_card-content {
+    padding-top:10px;
     padding-left:13px;
 }
 
 .h2_card-title {
     font-size:18px;
+    padding-bottom:5px;
 }
 
 .div_card-content p {
@@ -30,6 +31,8 @@
 
 .header {
     padding-bottom:13px;
+    box-shadow: 0 0 0.4em rgb(173, 173, 173);
+    z-index:2;
 }
 
 header img {
@@ -39,11 +42,11 @@ header img {
 }
 
 .section_location {
-    align-items:center;
     width:50%;
     padding-left:25%;
     padding-right:25%;
     background-color:#EAEAEA;
+    z-index:1;
 }
 
 .input-text {
@@ -59,7 +62,6 @@ header img {
 }
 
 .section_menu-selection {
-    align-items: center;
     text-align:center;
     padding-top:40px;
     padding-bottom:50px;
@@ -106,7 +108,6 @@ header img {
 .section_functioning h1,
 .section_restaurants h1 {
     width:90%;
-    margin-left:5%;
     margin-right:5%;
     margin-bottom:25px;
 }
@@ -119,27 +120,26 @@ header img {
     background-color:#9747FF;
     border-radius:100px;
     padding:4px 8px 2px 8px;
-    position:relative;
     right:32px;
     font-size:14px;
 }
 
 .section_restaurants {
-    align-items:center;
     padding-top:45px;
-    width:100%;
+    width:90%;
     padding-bottom:45px;
+    padding-left:5%;
+    padding-right:5%;
 }
 
 .div_restaurants-cards .cards {
   margin-bottom:17px;
-  height:240px;
-  box-sizing:border-box;
+  height:255px;
 }
 
 .div_restaurants-cards img {
     width:100%;
-    height:170px;
+    height:175px;
     max-height:100%;
     border-top-left-radius:15px;
     border-top-right-radius:15px;
@@ -151,28 +151,21 @@ header img {
     font-size:14px;
     font-weight: 500;
     padding:5px 13px 5px 13px;
-    position:relative;
-    left:250px;
-    bottom:160px;
+    left:245px;
+    bottom:210px;
 }
 
 .fa-heart {
-    position:relative;
     left: 300px;
-    bottom:40px;
+    bottom:50px;
 }
 
 .footer {
-    padding:25px 0px 25px 25px;
+    padding:25px 0px 15px 25px;
 }
 
 .footer a {
     text-decoration:none;
-    padding-bottom:8px;
-}
-
-.footer div {
-    padding-bottom: 8px;
 }
 
 .footer-title {
@@ -180,4 +173,8 @@ header img {
     font-size:18px;
     font-weight:300;
     margin-bottom:17px;
+}
+
+.footer_icon_and_link a {
+    padding-left:7px;
 }
