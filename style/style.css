@@ -11,6 +11,10 @@
     border-radius:15px;
 }
 
+a {
+    text-decoration: none;
+}
+
 .cards img {
     object-fit:cover;
 }
@@ -18,6 +22,8 @@
 .div_card-content {
     padding-top:10px;
     padding-left:13px;
+    text-decoration: none;
+    color:black;
 }
 
 .h2_card-title {
@@ -87,10 +93,9 @@ header img {
     border:none;
 }
 
-.section_functioning {
-    padding-top:45px;
-    padding-bottom:45px;
-    align-items:center;
+.button-exploration-and-command a {
+    color:white;
+    text-decoration:none;
 }
 
 .div_functioning-order {
@@ -125,9 +130,7 @@ header img {
 }
 
 .section_restaurants {
-    padding-top:45px;
     width:90%;
-    padding-bottom:45px;
     padding-left:5%;
     padding-right:5%;
 }
