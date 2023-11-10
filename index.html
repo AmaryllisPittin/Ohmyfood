@@ -13,6 +13,7 @@
     <link href="sass/style-sass.css" rel="stylesheet">
     <link href="sass/style-elements-merging-sass.css" rel="stylesheet">
     <link href="sass/dimensions-and-spacing.css" rel="stylesheet">
+    <link href="sass/animations-sass.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/56bc717981.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -27,13 +28,14 @@
     <section class="section_menu-selection">
         <h1>Réservez le menu qui vous convient</h1>
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <a href="#">
+        <a href="#restaurants">
             <button class="button-exploration-and-command">Explorez nos restaurants</button>
         </a>
     </section>
 
     <section class="section_functioning">
         <h1>Fonctionnement</h1>
+        <div class="all_div_functioning-order">
         <div class="div_functioning-order">
             <span>1</span>
             <i class="fa-solid fa-mobile-screen-button"></i>
@@ -49,9 +51,10 @@
             <i class="fa-solid fa-store"></i>
             <p>Dégustez au restaurant</p>
         </div>
+        </div>
     </section>
 
-    <section class="section_restaurants">
+    <section class="section_restaurants" id="restaurants">
         <h1>Restaurants</h1>
         <div class="div_restaurants-cards">
         <a href="#">
@@ -73,7 +76,9 @@
                     <h2 class="h2_card-title">La note enchantée</h2>
                     <p>Charonne</p>
                 </div>
-                <i class="fa-regular fa-heart fa-lg"></i>
+                <label>
+                    <input type="checkbox" value="1"><i class="fa-regular fa-heart fa-lg"></i>
+                </label>
             </article>
         </a>
         <a href="#">

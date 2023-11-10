@@ -12,3 +12,55 @@
     padding-top:45px;
     padding-bottom:45px;
 }
+
+/************************/
+
+$breakpoint-desktop:1024px;
+
+@media (min-width:$breakpoint-desktop) {
+    .section_location {
+        width: 18%;
+        padding-left:42%;
+        padding-right:40%;
+    }
+
+    .section_functioning {
+        align-items:normal;
+        width:80%;
+        margin-left:10%;
+        box-sizing:border-box;
+    }
+
+    .section_functioning h1 {
+        height:30px;
+        margin-bottom:0;
+    }
+
+    .all_div_functioning-order {
+        display:flex;
+        flex-direction:row;
+    }
+
+    .div_functioning-order {
+        margin-top:27px;
+        margin-right:3%;
+        margin-left:0;
+        width:70%;
+        padding-left:7px;
+        padding-right:7px;
+    }
+
+    .div_functioning-order span {
+        right:23px;
+    }
+    
+    .div_restaurants-cards {
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    .div_restaurants-cards .cards {
+    }
+}

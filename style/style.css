@@ -98,12 +98,15 @@ header img {
     text-decoration:none;
 }
 
+.section_functioning {
+    width: 85%;
+    margin-left:9%;
+    margin-right:6%;
+}
+
 .div_functioning-order {
     display:flex;
     flex-direction:row;
-    width:75%;
-    margin-left:14%;
-    margin-right:11%;
     padding:30px 20px 25px 20px;
     border-radius:20px;
     margin-bottom:20px;
@@ -113,12 +116,12 @@ header img {
 .section_functioning h1,
 .section_restaurants h1 {
     width:90%;
-    margin-right:5%;
     margin-bottom:25px;
 }
 
 .div_functioning-order p {
     padding-left:20px;
+    font-weight:500;
 }
 
 .div_functioning-order span {

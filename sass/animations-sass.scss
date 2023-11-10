@@ -1,0 +1,20 @@
+.button-exploration-and-command {
+    transition-property: filter;
+    transition-duration: 800ms;
+    cursor:pointer;
+    &:hover {
+        filter:brightness(1.1); 
+    }
+}
+
+.div_restaurants-cards a {
+    z-index:1;
+}
+
+.fa-heart {
+    background-color:unset;
+    z-index:2;
+    &:checked {
+        background-color: linear-gradient(rgb(219, 112, 223) 50%, #9747FF);
+    }
+}
