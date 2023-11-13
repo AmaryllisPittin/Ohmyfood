@@ -29,4 +29,23 @@
 .div_restaurants-cards .span_new,
 .fa-heart {
   position: absolute;
+}
+
+.section-prestentation-restaurant {
+  position: absolute;
+  top: 280px;
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    flex-direction: row-reverse;
+  }
+  .footer_2_icons_and_links {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer_all_links {
+    display: flex;
+    flex-direction: row;
+  }
 }/*# sourceMappingURL=style-elements-merging-sass.css.map */

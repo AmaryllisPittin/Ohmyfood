@@ -42,7 +42,7 @@ a {
 }
 
 header img {
-    margin-top:20px;
+    padding-top:20px;
     width:160px;
     height:30px;
 }
@@ -73,7 +73,7 @@ header img {
     padding-bottom:50px;
 }
 
-.section_menu-selection h1 {
+.section_menu-selection h2 {
    width:70%;
    padding-bottom:15px;
 }
@@ -113,10 +113,10 @@ header img {
     box-shadow:0px 5px 5px rgb(214, 214, 214);
 }
 
-.section_functioning h1,
-.section_restaurants h1 {
+.section_functioning h2,
+.restaurants-title {
     width:90%;
-    margin-bottom:25px;
+    padding-bottom:25px;
 }
 
 .div_functioning-order p {

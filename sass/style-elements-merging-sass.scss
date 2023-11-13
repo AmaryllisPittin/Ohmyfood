@@ -30,3 +30,26 @@
 .fa-heart {
     position:absolute;
 }
+
+.section-prestentation-restaurant {
+    position:absolute;
+    top:280px;
+}
+
+$breakpoint-desktop:1024px;
+
+@media (min-width:$breakpoint-desktop) {
+    .footer {
+        flex-direction:row-reverse;
+    }
+
+    .footer_2_icons_and_links {
+        display:flex;
+        flex-direction:row;
+    }
+    
+    .footer_all_links {
+        display:flex;
+        flex-direction:row;
+    }
+}
