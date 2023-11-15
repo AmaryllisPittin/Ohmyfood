@@ -17,115 +17,193 @@
     padding-bottom:45px;
 }
 
-/************************/
+$breakpoint-desktop: 1440px;
 
-$breakpoint-desktop:1024px;
-
-@media (min-width:$breakpoint-desktop) {
     .header {
-        padding-bottom:32px;
+        padding-bottom:13px;
+        z-index:2;
+            @media(min-width:$breakpoint-desktop) {
+            padding-bottom:32px;
+            }
     }
-    
+
     .header img {
-        width:200px;
-        height:auto;
-        padding-top:30px;
-    }
+        padding-top:20px;
+        width:160px;
+        height:30px;
+        @media (min-width:$breakpoint-desktop) {
+            width:200px;
+            height:auto;
+            padding-top:30px;
+            }
+        }
 
     .section_menu-selection {
-        padding-top:28px;
-        padding-bottom:30px;
+        padding-top:40px;
+        padding-bottom:50px;
+        @media (min-width:$breakpoint-desktop) {
+            padding-top:28px;
+            padding-bottom:30px;
+            }
     }
 
     .section_menu-selection h1 {
-        font-size:40px;
-        padding-bottom:30px;
+        width:63%;
+        font-size:23px;
+        padding-bottom:15px;
+        @media (min-width:$breakpoint-desktop) {
+            font-size:40px;
+            padding-bottom:30px;
+        }
     }
     
-    .section_location {
-        width: 18%;
-        padding-left:42%;
-        padding-right:40%;
+    .section_location {  
+        @media (min-width:$breakpoint-desktop) {
+            width: 18%;
+            padding-left:42%;
+            padding-right:40%;
+        }
     }
 
     .section_functioning {
-        align-items:normal;
-        width:74%;
-        margin-left:13%;
-        box-sizing:border-box;
-        padding-top:48px;
-        padding-bottom:30px;
-    }
-
-    .section_functioning h2 {
-        height:30px;
-        margin-bottom:0;
-    }
-
-    .all_div_functioning-order {
-        display:flex;
-        flex-direction:row;
-    }
-
-    .div_functioning-order {
-        margin-top:0;
-        margin-right:3%;
-        margin-left:0;
-        width:100%;
-        padding-left:7px;
-        padding-right:7px;
-        padding-bottom:22px;
-    }
-
-    .div_functioning-order p {
-        padding-left:27px;
-    }
-
-    .div_functioning-order span {
-        right:20px;
-    }
-
-    .section_restaurants {
-        padding-top:30px;
-        padding-bottom: 13px;
-        width:75%;
-        padding-left:12.5%;
-        padding-right:12.5%;
+        width: 86.5%;
+        margin-left:8%;
+        margin-right:5.5%;
+        @media (min-width:$breakpoint-desktop) {
+            align-items:normal;
+            width:74%;
+            margin-left:13%;
+            box-sizing:border-box;
+            padding-top:48px;
+            padding-bottom:30px;
+        }
     }
 
     .restaurants-title {
-        padding-bottom:27px;
+        width:90%;
+        padding-bottom:25px;
+}
+
+    .section_functioning h2 {
+        width:90%;
+        padding-bottom:25px;
+        @media (min-width:$breakpoint-desktop) {
+        height:30px;
+        margin-bottom:0;
+        }
+    }
+
+    .div_functioning-order {
+        padding:35px 77px 20px 12px;
+        border-radius:20px;
+        margin-bottom:20px;
+        @media (min-width:$breakpoint-desktop) {
+            margin-top:0;
+            margin-right:3%;
+            margin-left:0;
+            width:100%;
+            padding-left:7px;
+            padding-right:7px;
+            padding-bottom:22px;
+        }
+    }
+
+    .div_functioning-order p {
+        padding-left:20px;
+        font-weight:500;
+        @media (min-width:$breakpoint-desktop) {
+            padding-left:27px;
+        }
+    }
+
+    .div_functioning-order span {
+        border-radius:100px;
+        padding:4px 8px 2px 8px;
+        right:23px;
+        font-size:14px;
+        @media (min-width:$breakpoint-desktop) {
+            right:20px;
+        }
+    }
+
+    .section_restaurants {
+        width:90%;
+        padding-left:5%;
+        padding-right:5%;
+        @media (min-width:$breakpoint-desktop) {
+            padding-top:30px;
+            padding-bottom: 13px;
+            width:75%;
+            padding-left:12.5%;
+            padding-right:12.5%;
+        }
+    }
+
+    .restaurants-title {
+        @media (min-width:$breakpoint-desktop) {
+            padding-bottom:27px;
+        }
     }
     
     .div_restaurants-cards {
-        display:grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        width: 100%;
-        column-gap:100px;
-        row-gap: 34px;
+        @media (min-width:$breakpoint-desktop) {
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            width: 100%;
+            column-gap:100px;
+            row-gap: 34px;
+        }
     }
 
     .div_restaurants-cards .cards {
-        height:250px;
+        margin-bottom:17px;
+        height:255px;
+        @media (min-width:$breakpoint-desktop) {
+            height:250px;
+        }
     }
 
     .div_restaurants-cards .span_new {
-        left: 390px;
+        font-size:14px;
+        font-weight: 500;
+        padding:5px 13px 5px 13px;
+        left:245px;
+        bottom:210px;
+        @media (min-width:$breakpoint-desktop) {
+            left: 390px;
+        }
     }
 
     .fa-heart {
-        left:440px;
+        left: 300px;
+        bottom:50px;
+        @media (min-width:$breakpoint-desktop) {
+            left:440px;
+        }
+    }
+
+    i.fa-regular.fa-heart.fa-lg {
+        font-weight:300;
     }
 
     .footer {
-        padding-top:63px;
-        padding-bottom:7px;
+        padding:25px 0px 15px 25px;
+        @media (min-width:$breakpoint-desktop) {
+            padding-top:63px;
+            padding-bottom:7px;
+        }
     }
     
     .footer-title {
-        padding-left:90px;
-        padding-right:65px;
+        font-family: 'Shrikhand', serif;
+        font-size:18px;
+        font-weight:300;
+        margin-bottom:17px;
+        @media (min-width:$breakpoint-desktop) {
+            padding-left:90px;
+            padding-right:65px;
+        }
     }
 
     .footer_2_icons_and_links {
@@ -139,4 +217,3 @@ $breakpoint-desktop:1024px;
     .footer_simple_link {
         padding-left:15px;
     }
-}

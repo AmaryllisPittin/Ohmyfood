@@ -16,5 +16,5 @@
   z-index: 2;
 }
 .fa-heart:checked {
-  background: linear-gradient(rgb(219, 112, 223) 50%, #9747FF);
+  background-color: linear-gradient(rgb(219, 112, 223) 50%, #9747FF);
 }/*# sourceMappingURL=animations-sass.css.map */

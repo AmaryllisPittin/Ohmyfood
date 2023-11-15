@@ -1,8 +1,12 @@
+/*@use "style-elements-merging-sass";
+@use "dimensions-and-spacing";
+@use "animations-sass";*/
 /*COLORS*/
 .button-exploration-and-command,
 .div_functioning-order span,
 .footer a,
-.footer-title {
+.footer-title,
+.button-command {
   color: white;
 }
 

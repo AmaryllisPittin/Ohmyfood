@@ -1,3 +1,5 @@
+$breakpoint-desktop:1440px;
+
 .header,
 .section_location,
 .section_menu-selection {
@@ -19,6 +21,10 @@
     align-items:center;
 }
 
+.section_menu-selection {
+    text-align:center;
+}
+
 .header,
 .section_location,
 .div_functioning-order span,
@@ -36,9 +42,20 @@
     top:280px;
 }
 
-$breakpoint-desktop:1024px;
+.all_div_functioning-order {
+    @media (min-width:$breakpoint-desktop) {
+        display:flex;
+        flex-direction:row;
+    }
+}
+
+.footer_simple_link { 
+    display:flex;
+    flex-direction:column;
+}
 
 @media (min-width:$breakpoint-desktop) {
+
     .footer {
         flex-direction:row-reverse;
     }
