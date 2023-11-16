@@ -52,11 +52,6 @@
   }
 }
 
-.div_functioning-order {
-  display: flex;
-  flex-direction: row;
-}
-
 .footer_simple_link {
   display: flex;
   flex-direction: column;

@@ -40,6 +40,9 @@ $breakpoint-desktop:1440px;
 .section-prestentation-restaurant {
     position:absolute;
     top:280px;
+    @media (min-width:$breakpoint-desktop) {
+        top:440px;
+    }
 }
 
 .all_div_functioning-order {
@@ -47,6 +50,11 @@ $breakpoint-desktop:1440px;
         display:flex;
         flex-direction:row;
     }
+}
+
+.div_functioning-order {
+    display:flex;
+    flex-direction:row;
 }
 
 .footer_simple_link { 
@@ -60,11 +68,12 @@ $breakpoint-desktop:1440px;
         flex-direction:row-reverse;
     }
 
-    .footer_2_icons_and_links {
+    .footer_2_icons_and_links,
+    .footer_simple_link {
         display:flex;
         flex-direction:row;
     }
-    
+
     .footer_all_links {
         display:flex;
         flex-direction:row;

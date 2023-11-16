@@ -1,24 +1,36 @@
-/*@use "style-elements-merging-sass";
-@use "dimensions-and-spacing";
-@use "animations-sass";*/
-
-
+/***COLOR VALUES***/
 
 $main-color:white;
 $second-color: rgb(247,247,247);
 $third-color: #353535;
+$fourth-color:#9747FF;
 
 $main-color-fa-icon: #7E7E7E;
 $second-color-fa-icon:black;
 $third-color-fa-icon:white;
+
+$main-color-police:black;
+
+$main-color-box-shadow:rgb(173, 173, 173);
+$second-color-box-shadow:rgb(214, 214, 214);
+
+$main-color-button:linear-gradient(rgb(219, 112, 223) 50%, #9747FF);
+
+$main-color-span-new:#008766;
+$second-color-span-new:#99E2D0;
 
 /*COLORS*/
 .button-exploration-and-command,
 .div_functioning-order span,
 .footer a,
 .footer-title,
-.button-command {
+.button-command,
+.button-exploration-and-command a {
     color: $main-color;
+}
+
+.section_menu-selection p {
+    color:$third-color;
 }
 
 .fa-mobile-screen-button,
@@ -37,11 +49,20 @@ $third-color-fa-icon:white;
     color: $third-color-fa-icon;
 }
 
-.section_menu-selection p {
-    color:$third-color;
+.div_card-content,
+.fa-arrow-left {
+    color:$main-color-police;
+}
+
+.div_restaurants-cards .span_new {
+    color:$main-color-span-new;
 }
 
 /*BACKGROUND-COLOR*/
+
+.cards {
+    background-color:$main-color;
+}
 
 .section_menu-selection,
 .div_functioning-order,
@@ -53,6 +74,70 @@ $third-color-fa-icon:white;
     background-color: $third-color;
 }
 
+.div_functioning-order span {
+    background-color:$fourth-color;
+}
+
+.button-exploration-and-command {
+    background:$main-color-button;
+}
+
+.div_restaurants-cards .span_new {
+    background-color:$second-color-span-new;
+}
+
+.section_location {
+    background-color:#EAEAEA;
+}
+
 .section-prestentation-restaurant {
     background-color:#F6F6F6;
+}
+
+/***FONT-STYLE***/
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+a,
+.div_card-content,
+.button-exploration-and-command a,
+.footer a {
+  text-decoration: none;
+}
+
+.input-text {
+    border:none;
+    background-color:unset;
+    font-size:16px;
+    font-weight: 600;
+}
+
+.button-exploration-and-command {
+    font-size:17px;
+    border:none;
+}
+
+.div_card-content p {
+  font-weight:300;
+}
+
+/******BOX-SHADOW******/
+.header {
+    box-shadow: 0 0 0.4em $main-color-box-shadow;
+}
+
+.div_functioning-order {
+    box-shadow:0px 5px 5px $second-color-box-shadow;
+}
+
+/***IMAGE STYLE***/
+
+.cards img {
+    object-fit:cover;
+}
+
+.section_menu-selection p {
+    font-size:1.1em;
+    font-weight:300;
 }

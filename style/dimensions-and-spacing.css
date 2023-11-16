@@ -46,33 +46,6 @@
   }
 }
 
-.section_location {
-  width: 50%;
-  padding-left: 25%;
-  padding-right: 25%;
-  z-index: 1;
-}
-@media (min-width: 1440px) {
-  .section_location {
-    width: 18%;
-    padding-left: 42%;
-    padding-right: 40%;
-  }
-}
-
-.input-text {
-  margin: 15px 0px 15px 17px;
-}
-
-#place {
-  width: 60%;
-}
-
-.button-exploration-and-command {
-  padding: 15px 20px 15px 20px;
-  border-radius: 40px;
-}
-
 .section_menu-selection {
   padding-top: 40px;
   padding-bottom: 50px;
@@ -96,9 +69,12 @@
   }
 }
 
-.section_menu-selection p {
-  width: 85%;
-  padding-bottom: 30px;
+@media (min-width: 1440px) {
+  .section_location {
+    width: 18%;
+    padding-left: 42%;
+    padding-right: 40%;
+  }
 }
 
 .section_functioning {
@@ -208,14 +184,6 @@
   }
 }
 
-.div_restaurants-cards img {
-  width: 100%;
-  height: 175px;
-  max-height: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-
 .div_restaurants-cards .cards {
   margin-bottom: 17px;
   height: 255px;
@@ -288,10 +256,6 @@ i.fa-regular.fa-heart.fa-lg {
 
 .footer_icon_and_link {
   padding-right: 5px;
-}
-
-.footer_icon_and_link a {
-  padding-left: 7px;
 }
 
 .footer_simple_link {

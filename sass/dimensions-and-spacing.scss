@@ -1,9 +1,15 @@
+* {
+    margin:0;
+    padding:0;
+}
+
 .fa-arrow-left {
     padding-right:30px;
 }
 
 .cards {
     box-sizing:border-box;
+    border-radius:15px;
 }
 
 .footer a,
@@ -36,7 +42,32 @@ $breakpoint-desktop: 1440px;
             height:auto;
             padding-top:30px;
             }
+    }
+
+    .section_location {
+        width:50%;
+        padding-left:25%;
+        padding-right:25%;
+        z-index:1;
+        @media (min-width:$breakpoint-desktop) {
+            width: 18%;
+            padding-left:42%;
+            padding-right:40%;
         }
+    }
+
+    .input-text {
+        margin:15px 0px 15px 17px;
+    }
+
+    #place {
+        width:60%;
+    }
+
+    .button-exploration-and-command {
+        padding:15px 20px 15px 20px;
+        border-radius:40px;
+    }
 
     .section_menu-selection {
         padding-top:40px;
@@ -56,13 +87,10 @@ $breakpoint-desktop: 1440px;
             padding-bottom:30px;
         }
     }
-    
-    .section_location {  
-        @media (min-width:$breakpoint-desktop) {
-            width: 18%;
-            padding-left:42%;
-            padding-right:40%;
-        }
+
+    .section_menu-selection p {
+        width:85%;
+        padding-bottom:30px;
     }
 
     .section_functioning {
@@ -71,8 +99,8 @@ $breakpoint-desktop: 1440px;
         margin-right:5.5%;
         @media (min-width:$breakpoint-desktop) {
             align-items:normal;
-            width:74%;
-            margin-left:13%;
+            width:74.5%;
+            margin-left:13.5%;
             box-sizing:border-box;
             padding-top:48px;
             padding-bottom:30px;
@@ -82,7 +110,12 @@ $breakpoint-desktop: 1440px;
     .restaurants-title {
         width:90%;
         padding-bottom:25px;
-}
+    }
+
+    .h2_card-title {
+        font-size:18px;
+        padding-bottom:5px;
+    }
 
     .section_functioning h2 {
         width:90%;
@@ -99,12 +132,10 @@ $breakpoint-desktop: 1440px;
         margin-bottom:20px;
         @media (min-width:$breakpoint-desktop) {
             margin-top:0;
-            margin-right:3%;
+            margin-right:3.5%;
             margin-left:0;
-            width:100%;
-            padding-left:7px;
-            padding-right:7px;
-            padding-bottom:22px;
+            width:290px;
+            padding:35px 55px 20px 12px;
         }
     }
 
@@ -156,12 +187,25 @@ $breakpoint-desktop: 1440px;
         }
     }
 
+    .div_restaurants-cards img {
+        width:100%;
+        height:175px;
+        max-height:100%;
+        border-top-left-radius:15px;
+        border-top-right-radius:15px;
+    }
+
     .div_restaurants-cards .cards {
         margin-bottom:17px;
         height:255px;
         @media (min-width:$breakpoint-desktop) {
             height:250px;
         }
+    }
+
+    .div_card-content {
+        padding-top:10px;
+        padding-left:13px;
     }
 
     .div_restaurants-cards .span_new {
@@ -188,7 +232,7 @@ $breakpoint-desktop: 1440px;
     }
 
     .footer {
-        padding:25px 0px 15px 25px;
+        padding:20px 0px 0px 25px;
         @media (min-width:$breakpoint-desktop) {
             padding-top:63px;
             padding-bottom:7px;
@@ -202,16 +246,21 @@ $breakpoint-desktop: 1440px;
         margin-bottom:17px;
         @media (min-width:$breakpoint-desktop) {
             padding-left:90px;
-            padding-right:65px;
+            padding-right:85px;
         }
     }
 
     .footer_2_icons_and_links {
         padding-right:25px;
+        height: 47px;
     }
 
     .footer_icon_and_link {
         padding-right:5px;
+    }
+
+    .footer_icon_and_link a {
+        padding-left:7px;
     }
 
     .footer_simple_link {
