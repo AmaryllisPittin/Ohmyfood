@@ -10,14 +10,19 @@ $breakpoint-desktop:1440px;
 .section_menu-selection,
 .section_functioning,
 .section_restaurants,
-.footer {
+.footer,
+.footer_simple_link {
     display:flex;
     flex-direction:column;
 }
 
+.div_functioning-order {
+    display:flex;
+    flex-direction:row;
+}
+
 .section_location,
-.section_menu-selection,
-.section_functioning {
+.section_menu-selection {
     align-items:center;
 }
 
@@ -33,49 +38,30 @@ $breakpoint-desktop:1440px;
 }
 
 .div_restaurants-cards .span_new,
-.fa-heart {
+.fa-heart,
+.section-prestentation-restaurant {
     position:absolute;
 }
 
 .section-prestentation-restaurant {
-    position:absolute;
     top:280px;
     @media (min-width:$breakpoint-desktop) {
         top:440px;
     }
 }
 
-.all_div_functioning-order {
+.all_div_functioning-order,
+.footer_2_icons_and_links,
+.footer_simple_link,
+.footer_all_links {
     @media (min-width:$breakpoint-desktop) {
         display:flex;
         flex-direction:row;
+        }
     }
-}
-
-.div_functioning-order {
-    display:flex;
-    flex-direction:row;
-}
-
-.footer_simple_link { 
-    display:flex;
-    flex-direction:column;
-}
-
-@media (min-width:$breakpoint-desktop) {
-
-    .footer {
+    
+.footer {
+    @media (min-width:$breakpoint-desktop) {
         flex-direction:row-reverse;
+        }
     }
-
-    .footer_2_icons_and_links,
-    .footer_simple_link {
-        display:flex;
-        flex-direction:row;
-    }
-
-    .footer_all_links {
-        display:flex;
-        flex-direction:row;
-    }
-}

@@ -3,24 +3,9 @@
   padding: 0;
 }
 
-.fa-arrow-left {
-  padding-right: 30px;
-}
-
 .cards {
   box-sizing: border-box;
   border-radius: 15px;
-}
-
-.footer a,
-.footer div {
-  padding-bottom: 8px;
-}
-
-.section_functioning,
-.section_restaurants {
-  padding-top: 45px;
-  padding-bottom: 45px;
 }
 
 .header {
@@ -32,7 +17,6 @@
     padding-bottom: 32px;
   }
 }
-
 .header img {
   padding-top: 20px;
   width: 160px;
@@ -59,12 +43,10 @@
     padding-right: 40%;
   }
 }
-
-.input-text {
+.section_location .input-text {
   margin: 15px 0px 15px 17px;
 }
-
-#place {
+.section_location #place {
   width: 60%;
 }
 
@@ -83,7 +65,6 @@
     padding-bottom: 30px;
   }
 }
-
 .section_menu-selection h1 {
   width: 63%;
   font-size: 23px;
@@ -95,7 +76,6 @@
     padding-bottom: 30px;
   }
 }
-
 .section_menu-selection p {
   width: 85%;
   padding-bottom: 30px;
@@ -105,6 +85,8 @@
   width: 86.5%;
   margin-left: 8%;
   margin-right: 5.5%;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 @media (min-width: 1440px) {
   .section_functioning {
@@ -116,19 +98,7 @@
     padding-bottom: 30px;
   }
 }
-
-.restaurants-title {
-  width: 90%;
-  padding-bottom: 25px;
-}
-
-.h2_card-title {
-  font-size: 18px;
-  padding-bottom: 5px;
-}
-
 .section_functioning h2 {
-  width: 90%;
   padding-bottom: 25px;
 }
 @media (min-width: 1440px) {
@@ -152,7 +122,6 @@
     padding: 35px 55px 20px 12px;
   }
 }
-
 .div_functioning-order p {
   padding-left: 20px;
   font-weight: 500;
@@ -162,7 +131,6 @@
     padding-left: 27px;
   }
 }
-
 .div_functioning-order span {
   border-radius: 100px;
   padding: 4px 8px 2px 8px;
@@ -179,6 +147,8 @@
   width: 90%;
   padding-left: 5%;
   padding-right: 5%;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 @media (min-width: 1440px) {
   .section_restaurants {
@@ -190,10 +160,19 @@
   }
 }
 
+.restaurants-title {
+  width: 90%;
+  padding-bottom: 25px;
+}
 @media (min-width: 1440px) {
   .restaurants-title {
     padding-bottom: 27px;
   }
+}
+
+.h2_card-title {
+  font-size: 18px;
+  padding-bottom: 5px;
 }
 
 @media (min-width: 1440px) {
@@ -254,10 +233,6 @@
   }
 }
 
-i.fa-regular.fa-heart.fa-lg {
-  font-weight: 300;
-}
-
 .footer {
   padding: 20px 0px 0px 25px;
 }
@@ -266,6 +241,14 @@ i.fa-regular.fa-heart.fa-lg {
     padding-top: 63px;
     padding-bottom: 7px;
   }
+}
+
+.footer a {
+  padding-bottom: 8px;
+}
+
+.footer div {
+  padding-bottom: 8px;
 }
 
 .footer-title {

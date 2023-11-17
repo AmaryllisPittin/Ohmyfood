@@ -11,10 +11,25 @@
   z-index: 1;
 }
 
-.fa-heart {
-  background-color: unset;
-  z-index: 2;
+i.fa-heart {
+  z-index: 3;
 }
-.fa-heart:checked {
-  background-color: linear-gradient(rgb(219, 112, 223) 50%, #9747FF);
+i.fa-heart i.fa-heart:active {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: linear-gradient(rgb(219, 112, 223) 50%, #9747FF);
+}
+
+.food-checked {
+  position: absolute;
+  left: 310px;
+  top: 138px;
+  font-size: 20px;
+  padding: 22px 20px 23px 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: var(--fa-display, none);
+}
+.food-checked .fa-heart::before {
+  font-weight: bold;
 }/*# sourceMappingURL=animations-sass.css.map */

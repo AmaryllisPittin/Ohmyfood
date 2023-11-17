@@ -5,7 +5,8 @@
 .footer a,
 .footer-title,
 .button-command,
-.button-exploration-and-command a {
+.button-exploration-and-command a,
+.food-checked {
   color: white;
 }
 
@@ -61,7 +62,8 @@
   background: linear-gradient(rgb(219, 112, 223) 50%, #9747FF);
 }
 
-.div_restaurants-cards .span_new {
+.div_restaurants-cards .span_new,
+.food-checked {
   background-color: #99E2D0;
 }
 

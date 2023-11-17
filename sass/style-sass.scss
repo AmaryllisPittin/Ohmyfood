@@ -16,8 +16,8 @@ $second-color-box-shadow:rgb(214, 214, 214);
 
 $main-color-button:linear-gradient(rgb(219, 112, 223) 50%, #9747FF);
 
-$main-color-span-new:#008766;
-$second-color-span-new:#99E2D0;
+$main-color-span:#008766;
+$second-color-span:#99E2D0;
 
 /*COLORS*/
 .button-exploration-and-command,
@@ -25,7 +25,8 @@ $second-color-span-new:#99E2D0;
 .footer a,
 .footer-title,
 .button-command,
-.button-exploration-and-command a {
+.button-exploration-and-command a,
+.food-checked {
     color: $main-color;
 }
 
@@ -55,7 +56,7 @@ $second-color-span-new:#99E2D0;
 }
 
 .div_restaurants-cards .span_new {
-    color:$main-color-span-new;
+    color:$main-color-span;
 }
 
 /*BACKGROUND-COLOR*/
@@ -82,8 +83,9 @@ $second-color-span-new:#99E2D0;
     background:$main-color-button;
 }
 
-.div_restaurants-cards .span_new {
-    background-color:$second-color-span-new;
+.div_restaurants-cards .span_new,
+.food-checked {
+    background-color:$second-color-span;
 }
 
 .section_location {

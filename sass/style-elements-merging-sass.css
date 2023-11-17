@@ -8,14 +8,19 @@
 .section_menu-selection,
 .section_functioning,
 .section_restaurants,
-.footer {
+.footer,
+.footer_simple_link {
   display: flex;
   flex-direction: column;
 }
 
+.div_functioning-order {
+  display: flex;
+  flex-direction: row;
+}
+
 .section_location,
-.section_menu-selection,
-.section_functioning {
+.section_menu-selection {
   align-items: center;
 }
 
@@ -31,12 +36,12 @@
 }
 
 .div_restaurants-cards .span_new,
-.fa-heart {
+.fa-heart,
+.section-prestentation-restaurant {
   position: absolute;
 }
 
 .section-prestentation-restaurant {
-  position: absolute;
   top: 280px;
 }
 @media (min-width: 1440px) {
@@ -46,33 +51,17 @@
 }
 
 @media (min-width: 1440px) {
-  .all_div_functioning-order {
+  .all_div_functioning-order,
+  .footer_2_icons_and_links,
+  .footer_simple_link,
+  .footer_all_links {
     display: flex;
     flex-direction: row;
   }
-}
-
-.div_functioning-order {
-  display: flex;
-  flex-direction: row;
-}
-
-.footer_simple_link {
-  display: flex;
-  flex-direction: column;
 }
 
 @media (min-width: 1440px) {
   .footer {
     flex-direction: row-reverse;
-  }
-  .footer_2_icons_and_links,
-  .footer_simple_link {
-    display: flex;
-    flex-direction: row;
-  }
-  .footer_all_links {
-    display: flex;
-    flex-direction: row;
   }
 }/*# sourceMappingURL=style-elements-merging-sass.css.map */
