@@ -1,11 +1,22 @@
+/***MIXINS AND VALUES***/
 $breakpoint-desktop: 1440px;
+
+@mixin main-padding-bottom {
+    padding-bottom:30px;
+}
+
+@mixin main-section-padding {
+    padding-top:45px;
+    padding-bottom:45px;
+}
+/**********************/
 
 * {
     margin:0;
     padding:0;
 }
 
-.cards {
+.article-cards {
     box-sizing:border-box;
     border-radius:15px;
 }
@@ -56,20 +67,20 @@ $breakpoint-desktop: 1440px;
     padding-bottom:50px;
     @media (min-width:$breakpoint-desktop) {
         padding-top:28px;
-        padding-bottom:30px;
-        }
+        @include main-padding-bottom;
+    }
     h1 {
         width:63%;
         font-size:23px;
         padding-bottom:15px;
         @media (min-width:$breakpoint-desktop) {
             font-size:40px;
-            padding-bottom:30px;
+            @include main-padding-bottom;
             }
         }
         p {
             width:85%;
-            padding-bottom:30px;
+            @include main-padding-bottom;
         }
 }
 
@@ -77,15 +88,14 @@ $breakpoint-desktop: 1440px;
     width: 86.5%;
     margin-left:8%;
     margin-right:5.5%;
-    padding-top:45px;
-    padding-bottom:45px;
+    @include main-section-padding;
     @media (min-width:$breakpoint-desktop) {
         align-items:normal;
         width:74.5%;
         margin-left:13.5%;
         box-sizing:border-box;
         padding-top:48px;
-        padding-bottom:30px;
+        @include main-padding-bottom;
     }
     h2 {
         padding-bottom:25px;
@@ -129,26 +139,24 @@ $breakpoint-desktop: 1440px;
     width:90%;
     padding-left:5%;
     padding-right:5%;
-    padding-top:45px;
-    padding-bottom:45px;
+    @include main-section-padding;
     @media (min-width:$breakpoint-desktop) {
         padding-top:30px;
-        padding-bottom: 13px;
+        padding-bottom:13px;
         width:75%;
         padding-left:12.5%;
         padding-right:12.5%;
     }
-}
-
-.restaurants-title {
-    width:90%;
-    padding-bottom:25px;
-    @media (min-width:$breakpoint-desktop) {
-        padding-bottom:27px;
+    .section_restaurants__h2 {
+        width:90%;
+        padding-bottom:25px;
+        @media (min-width:$breakpoint-desktop) {
+            padding-bottom:27px;
+        }
     }
 }
 
-.h2_card-title {
+.article-cards__h2 {
     font-size:18px;
     padding-bottom:5px;
 }
@@ -162,38 +170,35 @@ $breakpoint-desktop: 1440px;
         column-gap:100px;
         row-gap: 34px;
     }
-}
-
-.div_restaurants-cards img {
-    width:100%;
-    height:175px;
-    max-height:100%;
-    border-top-left-radius:15px;
-    border-top-right-radius:15px;
-}
-
-.div_restaurants-cards .cards {
-    margin-bottom:17px;
-    height:255px;
-    @media (min-width:$breakpoint-desktop) {
-        height:250px;
+    img {
+        width:100%;
+        height:175px;
+        max-height:100%;
+        border-top-left-radius:15px;
+        border-top-right-radius:15px;
+    }
+    .article-cards {
+        margin-bottom:17px;
+        height:255px;
+        @media (min-width:$breakpoint-desktop) {
+            height:250px;
+        }
+    }
+    .article__span_new {
+        font-size:14px;
+        font-weight: 500;
+        padding:5px 13px 5px 13px;
+        left:245px;
+        bottom:210px;
+        @media (min-width:$breakpoint-desktop) {
+            left: 390px;
+        }
     }
 }
 
-.div_card-content {
+.article-cards__content {
     padding-top:10px;
     padding-left:13px;
-}
-
-.div_restaurants-cards .span_new {
-    font-size:14px;
-    font-weight: 500;
-    padding:5px 13px 5px 13px;
-    left:245px;
-    bottom:210px;
-    @media (min-width:$breakpoint-desktop) {
-        left: 390px;
-    }
 }
 
 .fa-heart {
@@ -210,17 +215,15 @@ $breakpoint-desktop: 1440px;
         padding-top:63px;
         padding-bottom:7px;
     }
-}
-
-.footer a {
-    padding-bottom:8px;
-}
-
-.footer div {
-    padding-bottom:8px;
+    a {
+        padding-bottom:8px;
+    }
+    div {
+        padding-bottom:8px;
+    }
 }
     
-.footer-title {
+.footer__h1 {
     font-family: 'Shrikhand', serif;
     font-size:18px;
     font-weight:300;
@@ -238,10 +241,9 @@ $breakpoint-desktop: 1440px;
 
 .footer_icon_and_link {
     padding-right:5px;
-}
-
-.footer_icon_and_link a {
-    padding-left:7px;
+    a {
+        padding-left:7px;
+    }
 }
 
 .footer_simple_link {

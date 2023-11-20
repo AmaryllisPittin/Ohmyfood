@@ -3,7 +3,7 @@
 .button-exploration-and-command,
 .div_functioning-order span,
 .footer a,
-.footer-title,
+.footer__h1,
 .button-command,
 .button-exploration-and-command a,
 .food-checked {
@@ -30,17 +30,17 @@
   color: white;
 }
 
-.div_card-content,
+.article-cards__content,
 .fa-arrow-left {
   color: black;
 }
 
-.div_restaurants-cards .span_new {
+.div_restaurants-cards .article__span_new {
   color: #008766;
 }
 
 /*BACKGROUND-COLOR*/
-.cards {
+.article-cards {
   background-color: white;
 }
 
@@ -62,7 +62,7 @@
   background: linear-gradient(rgb(219, 112, 223) 50%, #9747FF);
 }
 
-.div_restaurants-cards .span_new,
+.div_restaurants-cards .article__span_new,
 .food-checked {
   background-color: #99E2D0;
 }
@@ -81,7 +81,7 @@
 }
 
 a,
-.div_card-content,
+.article-cards__content,
 .button-exploration-and-command a,
 .footer a {
   text-decoration: none;
@@ -99,7 +99,7 @@ a,
   border: none;
 }
 
-.div_card-content p {
+.article-cards__content p {
   font-weight: 300;
 }
 
@@ -113,7 +113,7 @@ a,
 }
 
 /***IMAGE STYLE***/
-.cards img {
+.article-cards img {
   -o-object-fit: cover;
      object-fit: cover;
 }

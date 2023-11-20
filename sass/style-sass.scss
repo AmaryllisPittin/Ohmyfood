@@ -23,7 +23,7 @@ $second-color-span:#99E2D0;
 .button-exploration-and-command,
 .div_functioning-order span,
 .footer a,
-.footer-title,
+.footer__h1,
 .button-command,
 .button-exploration-and-command a,
 .food-checked {
@@ -50,18 +50,18 @@ $second-color-span:#99E2D0;
     color: $third-color-fa-icon;
 }
 
-.div_card-content,
+.article-cards__content,
 .fa-arrow-left {
     color:$main-color-police;
 }
 
-.div_restaurants-cards .span_new {
+.div_restaurants-cards .article__span_new {
     color:$main-color-span;
 }
 
 /*BACKGROUND-COLOR*/
 
-.cards {
+.article-cards {
     background-color:$main-color;
 }
 
@@ -83,7 +83,7 @@ $second-color-span:#99E2D0;
     background:$main-color-button;
 }
 
-.div_restaurants-cards .span_new,
+.div_restaurants-cards .article__span_new,
 .food-checked {
     background-color:$second-color-span;
 }
@@ -102,7 +102,7 @@ $second-color-span:#99E2D0;
 }
 
 a,
-.div_card-content,
+.article-cards__content,
 .button-exploration-and-command a,
 .footer a {
   text-decoration: none;
@@ -120,7 +120,7 @@ a,
     border:none;
 }
 
-.div_card-content p {
+.article-cards__content p {
   font-weight:300;
 }
 
@@ -135,7 +135,7 @@ a,
 
 /***IMAGE STYLE***/
 
-.cards img {
+.article-cards img {
     object-fit:cover;
 }
 
