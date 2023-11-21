@@ -1,4 +1,5 @@
-.button-exploration-and-command {
+.button-exploration-and-command,
+.button-command {
     transition-property: filter;
     transition-duration: 800ms;
     cursor:pointer;
@@ -31,5 +32,82 @@ i.fa-heart {
     display:var(--fa-display,none);
     .fa-heart::before {
         font-weight:bold;
+    }
+}
+
+.loader {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:#000000;
+    width:100%;
+    height:100%;
+    z-index:6;
+    position:fixed;
+}
+
+.first-stop {
+    stop-color: rgb(219, 112, 223);
+    stop-opacity:1;
+}
+
+.second-stop {
+    stop-color:#9747FF;
+    stop-opacity:1;
+}
+
+$transition-duration:2s;
+$path-length:157px;
+
+svg {
+    overflow:visible;
+    width:100px;
+    height:150px;
+    
+    g {
+        animation: slide $transition-duration linear infinite;
+
+        &:nth-child(2) {
+            animation-delay: $transition-duration / 4;
+
+            path {
+                animation-delay: $transition-duration / 4;
+                stroke-dasharray:0px $path-length + 1;
+                stroke-dashoffset: 1px;   
+            }
+        }
+    }
+    path {
+        stroke: url(#gradient);
+        stroke-width:20px;
+        stroke-linecap:round;
+        fill:none;
+        stroke-dasharray:0px $path-length;
+        stroke-dashoffset: 0; 
+        animation:escalade $transition-duration cubic-bezier(0.8, 0, 0.2, 1) infinite;
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform:translateY(-50px);
+    }
+    100% {
+        transform:translateY(50px);
+    }
+}
+
+@keyframes escalade {
+    0% {
+        stroke-dasharray:0px $path-length;
+        stroke-dashoffset: 0; 
+    }
+    50% {
+        stroke-dasharray:$path-length $path-length;
+        stroke-dashoffset: 0;   
+    }
+    100% {
+        stroke-dasharray:$path-length $path-length;
+        stroke-dashoffset: -($path-length - 1); 
     }
 }
