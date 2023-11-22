@@ -35,7 +35,9 @@ i.fa-heart {
     }
 }
 
+/*******************LOADER*******************/
 .loader {
+    animation:disappear 3.5s forwards;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -109,5 +111,18 @@ svg {
     100% {
         stroke-dasharray:$path-length $path-length;
         stroke-dashoffset: -($path-length - 1); 
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+        display:none;
     }
 }

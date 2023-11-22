@@ -1,3 +1,9 @@
+/***IMPORT***/
+
+@import '_style-elements-merging';
+@import '_dimensions-and-spacing';
+@import '_animations';
+
 /***COLOR VALUES***/
 
 $main-color:white;
@@ -38,6 +44,10 @@ $second-color-span:#99E2D0;
 .fa-list-ul,
 .fa-store {
     color: $main-color-fa-icon;
+}
+
+.fa-store:hover {
+    color: $fourth-color;
 }
 
 .fa-heart,

@@ -28,6 +28,7 @@ $breakpoint-desktop: 1440px;
         position:absolute;
         top:-230px;
         z-index:1;
+        max-height:1315px;
     }
 }
 
@@ -54,7 +55,8 @@ h2 {
     }
 }
 
-.section-prestentation-restaurant {
+.section-prestentation-restaurant,
+.section-prestentation-restaurant--long-menu {
     padding-top:30px;
     width:100%;
     border-top-left-radius:40px;
@@ -63,6 +65,7 @@ h2 {
     @media (min-width:$breakpoint-desktop) {
         z-index:3;
         width:73.5%;
+        height:1100px;
         margin-left:13.25%;
         margin-right:13.25%;
         display:flex;
@@ -74,6 +77,13 @@ h2 {
             display:flex;
             justify-content:center;
         }
+    }
+}
+
+.section-prestentation-restaurant--long-menu {
+    height:1180px;
+    @media (min-width:$breakpoint-desktop) {
+        height:1160px;
     }
 }
 

@@ -33,7 +33,7 @@ $breakpoint-desktop:1440px;
 .header,
 .section_location,
 .div_functioning-order span,
-.div_restaurants-cards .cards {
+.div_restaurants-cards .article-cards {
     position:relative;
 }
 
@@ -47,6 +47,13 @@ $breakpoint-desktop:1440px;
     top:280px;
     @media (min-width:$breakpoint-desktop) {
         top:440px;
+    }
+}
+
+.section-prestentation-restaurant--long-menu {
+    top: 200px;
+    @media (min-width:$breakpoint-desktop) {
+        top:380px;
     }
 }
 
