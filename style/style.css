@@ -357,12 +357,23 @@
 .button-exploration-and-command,
 .button-command {
   transition-property: filter;
-  transition-duration: 800ms;
+  transition-duration: 600ms;
   cursor: pointer;
 }
 .button-exploration-and-command:hover,
 .button-command:hover {
   filter: brightness(1.1);
+}
+
+.div_functioning-order,
+.article-cards,
+.food-name-selection {
+  transition: transform 0.2s;
+}
+.div_functioning-order:hover,
+.article-cards:hover,
+.food-name-selection:hover {
+  transform: scale(1.1);
 }
 
 .div_restaurants-cards a {
@@ -470,11 +481,16 @@ svg path {
   90% {
     opacity: 1;
   }
+  99% {
+    z-index: 6;
+  }
   100% {
     opacity: 0;
     display: none;
+    z-index: -10;
   }
 }
+/************FOOTER A**********/
 /***COLOR VALUES***/
 /*COLORS*/
 .button-exploration-and-command,
