@@ -1,10 +1,59 @@
+/*************BODY AND ELEMENTS APPARITIONS*******************/
+body {
+    animation:sweet-link-transition 1s;
+}
+
+@keyframes sweet-link-transition {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+.food-name-selection {
+    animation-name: apparition;
+    animation-delay:0s;
+    animation-duration:1s;
+    opacity:0;
+    animation-fill-mode:forwards;
+}
+
+@keyframes apparition {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+.food-name-selection-first {
+    animation-delay:0.2s;
+}
+
+.food-name-selection-second {
+    animation-delay: 0.4s;
+}
+
+.food-name-selection-third {
+    animation-delay: 0.6s;
+}
+
+.food-name-selection-fourth {
+    animation-delay:0.8s;
+}
+
+
+/**********BUTTONS******************************/
 .button-exploration-and-command,
 .button-command {
-    transition-property: filter;
-    transition-duration: 600ms;
+    transition:opacity 0.6s, box-shadow 0.6s;
     cursor:pointer;
     &:hover {
-        filter:brightness(1.1);
+        opacity:0.7;
+        box-shadow:2px 4px 6px rgba(0, 0, 0, 0.2);
     }
 }
 
@@ -13,8 +62,18 @@
 .food-name-selection {
     transition:transform 0.2s;
     &:hover {
-        transform:scale(1.1);
+        transform:scale(1.025);
     }
+    @media (min-width:$breakpoint-desktop) {
+    transition:transform 0.2s;
+    &:hover {
+        transform:scale(1.1);
+        }
+    }
+}
+
+.div_functioning-order:hover i {
+    color:#9747FF;
 }
 
 .div_restaurants-cards a {
@@ -141,3 +200,9 @@ svg {
 }
 
 /************FOOTER A**********/
+.footer a {
+    transition: brightness 0.3s;
+    &:hover {
+    filter:brightness(1.3);
+    }
+}
