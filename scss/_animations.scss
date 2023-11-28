@@ -335,11 +335,12 @@ svg {
     right:0px;
 }
 
-.food-specificity {
-    width:263px;
+.food-checked:active .food-specificity {
+    width:250px;
     white-space: nowrap;
     overflow:hidden;
     text-overflow: ellipsis;
+    box-sizing:content-box;
 }
 
 
