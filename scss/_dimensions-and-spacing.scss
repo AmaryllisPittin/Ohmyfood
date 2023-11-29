@@ -40,20 +40,15 @@ $breakpoint-desktop: 1440px;
 }
 
 .section_location {
-    width:50%;
-    padding-left:25%;
-    padding-right:25%;
-    z-index:1;
-    @media (min-width:$breakpoint-desktop) {
-        width: 18%;
-        padding-left:42%;
-        padding-right:40%;
-    }
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
     .input-text {
         margin:15px 0px 15px 17px;
     }
     #place {
-        width:60%;
+        width:112px;
     }
 }
 
@@ -107,7 +102,7 @@ $breakpoint-desktop: 1440px;
 }
 
 .div_functioning-order {
-    padding:35px 77px 20px 12px;
+    padding:35px 30px 20px 12px;
     border-radius:20px;
     margin-bottom:20px;
     @media (min-width:$breakpoint-desktop) {
@@ -188,11 +183,8 @@ $breakpoint-desktop: 1440px;
         font-size:14px;
         font-weight: 500;
         padding:5px 13px 5px 13px;
-        left:245px;
+        right:15px;
         bottom:210px;
-        @media (min-width:$breakpoint-desktop) {
-            left: 390px;
-        }
     }
 }
 
@@ -202,11 +194,8 @@ $breakpoint-desktop: 1440px;
 }
 
 .fa-heart {
-    left: 300px;
-    bottom:50px;
-    @media (min-width:$breakpoint-desktop) {
-        left:420px;
-    }
+    right:25px;
+    bottom:35px;
 }
 
 .footer {
@@ -221,6 +210,13 @@ $breakpoint-desktop: 1440px;
     div {
         padding-bottom:8px;
     }
+    .footer_all_links {
+        @media (min-width:$breakpoint-desktop) {
+        display:flex;
+        flex-direction:row;
+        justify-content:flex-end;
+        }
+    }
 }
     
 .footer__h1 {
@@ -230,7 +226,7 @@ $breakpoint-desktop: 1440px;
     margin-bottom:17px;
     @media (min-width:$breakpoint-desktop) {
         padding-left:90px;
-        padding-right:85px;
+        padding-right:65px;
     }
 }
 
@@ -247,5 +243,13 @@ $breakpoint-desktop: 1440px;
 }
 
 .footer_simple_link {
-    padding-left:15px;
+    @media (min-width:$breakpoint-desktop) {
+        padding-left:7px;
+    }
+}
+
+.footer_contact_link {
+    @media (min-width:$breakpoint-desktop) {
+        padding-left:20px;
+    }
 }

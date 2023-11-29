@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /***IMPORT***/
 .header,
 .section_location,
@@ -53,7 +52,7 @@
 }
 
 .section-prestentation-restaurant--long-menu {
-  top: 200px;
+  top: 280px;
 }
 @media (min-width: 1440px) {
   .section-prestentation-restaurant--long-menu {
@@ -112,23 +111,16 @@
 }
 
 .section_location {
-  width: 50%;
-  padding-left: 25%;
-  padding-right: 25%;
-  z-index: 1;
-}
-@media (min-width: 1440px) {
-  .section_location {
-    width: 18%;
-    padding-left: 42%;
-    padding-right: 40%;
-  }
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .section_location .input-text {
   margin: 15px 0px 15px 17px;
 }
 .section_location #place {
-  width: 60%;
+  width: 112px;
 }
 
 .button-exploration-and-command {
@@ -190,7 +182,7 @@
 }
 
 .div_functioning-order {
-  padding: 35px 77px 20px 12px;
+  padding: 35px 30px 20px 12px;
   border-radius: 20px;
   margin-bottom: 20px;
 }
@@ -286,13 +278,8 @@
   font-size: 14px;
   font-weight: 500;
   padding: 5px 13px 5px 13px;
-  left: 245px;
+  right: 15px;
   bottom: 210px;
-}
-@media (min-width: 1440px) {
-  .div_restaurants-cards .article__span_new {
-    left: 390px;
-  }
 }
 
 .article-cards__content {
@@ -301,13 +288,8 @@
 }
 
 .fa-heart {
-  left: 300px;
-  bottom: 50px;
-}
-@media (min-width: 1440px) {
-  .fa-heart {
-    left: 420px;
-  }
+  right: 25px;
+  bottom: 35px;
 }
 
 .footer {
@@ -325,6 +307,13 @@
 .footer div {
   padding-bottom: 8px;
 }
+@media (min-width: 1440px) {
+  .footer .footer_all_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
 
 .footer__h1 {
   font-family: "Shrikhand", serif;
@@ -335,7 +324,7 @@
 @media (min-width: 1440px) {
   .footer__h1 {
     padding-left: 90px;
-    padding-right: 85px;
+    padding-right: 65px;
   }
 }
 
@@ -351,8 +340,16 @@
   padding-left: 7px;
 }
 
-.footer_simple_link {
-  padding-left: 15px;
+@media (min-width: 1440px) {
+  .footer_simple_link {
+    padding-left: 7px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer_contact_link {
+    padding-left: 20px;
+  }
 }
 
 /*************BODY AND ELEMENTS APPARITIONS*******************/
@@ -412,23 +409,19 @@ body {
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.div_functioning-order,
 .article-cards,
 .food-name-selection {
   transition: transform 0.2s;
 }
-.div_functioning-order:hover,
 .article-cards:hover,
 .food-name-selection:hover {
   transform: scale(1.025);
 }
 @media (min-width: 1440px) {
-  .div_functioning-order,
   .article-cards,
   .food-name-selection {
     transition: transform 0.2s;
   }
-  .div_functioning-order:hover,
   .article-cards:hover,
   .food-name-selection:hover {
     transform: scale(1.1);
@@ -444,31 +437,44 @@ body {
   z-index: 1;
 }
 
-i.fa-heart {
-  z-index: 3;
-}
-i.fa-heart i.fa-heart:active {
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: linear-gradient(rgb(219, 112, 223) 50%, #9747FF);
+/******************HEARTS*****************/
+.fa-heart {
+  font-size: 1.5em;
 }
 
-/*.food-checked {
-    position:absolute;
-    left:310px;
-    top:138px;
-    font-size:20px;
-    padding:22px 20px 23px 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    display:var(--fa-display,none);
-    .fa-heart::before {
-        font-weight:bold;
-    }
-}*/
+.fa-regular {
+  color: black;
+  z-index: 3;
+}
+
+.fa-heart-solid-position {
+  position: relative;
+  right: 30px;
+}
+
+.fa-heart-regular-position {
+  position: relative;
+  left: 3%;
+  top: 0px;
+}
+
+.fa-solid.fa-heart {
+  visibility: hidden;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(rgb(219, 112, 223) 30%, #9747FF);
+  z-index: 2;
+  transition: visibility;
+}
+
+.fa-regular:active ~ .fa-solid {
+  visibility: visible;
+}
+
 /*******************LOADER*******************/
 .loader {
-  animation: disappear 3.5s forwards;
+  animation: disappear 2s forwards;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -554,82 +560,14 @@ svg path {
   }
 }
 /***************CHECK-MENU**************/
-/*.container_menu {
-    width:85%;
-    height:400px;
-    margin-left:7.5%;
-    display:flex;
-    justify-content:center;
-    background-color:rgb(247,247,247);
-    z-index:3;
-  }*/
-@media (min-width: 1440px) {
-  .food-selection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .food-name-selection {
-    width: 650px;
-    height: 43px;
-    background-color: white;
-    position: relative;
-    top: 50px;
-    border-radius: 20px;
-    box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.2);
-    z-index: 0;
-  }
-  .food-specificity-and-price {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .food-checked {
-    position: absolute;
-    top: 0px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    padding: 19px 18px 20px 18px;
-    font-size: 25px;
-    transition: left 0.3s ease-out;
-  }
-  #foodCheckbox:checked ~ label .food-checked {
-    left: 575px;
-  }
-  #foodCheckbox:not(:checked) ~ label .food-checked {
-    left: 640px;
-  }
-  #foodCheckbox {
-    display: none;
-  }
-  .price {
-    position: relative;
-    right: 0px;
-    transition: right 0.3s ease-out;
-  }
-  #foodCheckbox:checked ~ label .price {
-    right: 65px;
-  }
-  #foodCheckbox:not(:checked) ~ label .price {
-    right: 0px;
-  }
-}
-/********mobile espèce de petite andouillette qui pue des pieds********/
-.food-selection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .food-name-selection {
   width: 650px;
   height: 43px;
   background-color: white;
-  position: relative;
-  top: 50px;
   border-radius: 20px;
   box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.2);
   z-index: 0;
+  overflow: hidden;
 }
 
 .food-specificity-and-price {
@@ -641,24 +579,50 @@ svg path {
 .food-checked {
   position: absolute;
   top: 0px;
+  right: 0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   padding: 19px 18px 20px 18px;
   font-size: 25px;
-  transition: left 0.3s ease-out;
+  transition: right 0.3s ease-out;
 }
 
-#foodCheckbox:checked ~ label .food-checked {
-  /*left:575px;*/
-  left: 83%;
+#Checkbox-starter-1:checked ~ label .food-checked,
+#Checkbox-starter-2:checked ~ label .food-checked,
+#Checkbox-starter-3:checked ~ label .food-checked,
+#Checkbox-starter-4:checked ~ label .food-checked,
+#Checkbox-course-1:checked ~ label .food-checked,
+#Checkbox-course-2:checked ~ label .food-checked,
+#Checkbox-course-3:checked ~ label .food-checked,
+#Checkbox-dessert-1:checked ~ label .food-checked,
+#Checkbox-dessert-2:checked ~ label .food-checked,
+#Checkbox-dessert-3:checked ~ label .food-checked {
+  right: 0;
 }
 
-#foodCheckbox:not(:checked) ~ label .food-checked {
-  /*left: 640px;*/
-  left: 110%;
+#Checkbox-starter-1:not(:checked) ~ label .food-checked,
+#Checkbox-starter-2:not(:checked) ~ label .food-checked,
+#Checkbox-starter-3:not(:checked) ~ label .food-checked,
+#Checkbox-starter-4:not(:checked) ~ label .food-checked,
+#Checkbox-course-1:not(:checked) ~ label .food-checked,
+#Checkbox-course-2:not(:checked) ~ label .food-checked,
+#Checkbox-course-3:not(:checked) ~ label .food-checked,
+#Checkbox-dessert-1:not(:checked) ~ label .food-checked,
+#Checkbox-dessert-2:not(:checked) ~ label .food-checked,
+#Checkbox-dessert-3:not(:checked) ~ label .food-checked {
+  right: -80px;
 }
 
-#foodCheckbox {
+#Checkbox-starter-1,
+#Checkbox-starter-2,
+#Checkbox-starter-3,
+#Checkbox-starter-4,
+#Checkbox-course-1,
+#Checkbox-course-2,
+#Checkbox-course-3,
+#Checkbox-dessert-1,
+#Checkbox-dessert-2,
+#Checkbox-dessert-3 {
   display: none;
 }
 
@@ -668,20 +632,72 @@ svg path {
   transition: right 0.3s ease-out;
 }
 
-#foodCheckbox:checked ~ label .price {
+#Checkbox-starter-1:checked ~ label .price,
+#Checkbox-starter-2:checked ~ label .price,
+#Checkbox-starter-3:checked ~ label .price,
+#Checkbox-starter-4:checked ~ label .price,
+#Checkbox-course-1:checked ~ label .price,
+#Checkbox-course-2:checked ~ label .price,
+#Checkbox-course-3:checked ~ label .price,
+#Checkbox-dessert-1:checked ~ label .price,
+#Checkbox-dessert-2:checked ~ label .price,
+#Checkbox-dessert-3:checked ~ label .price {
   right: 65px;
 }
 
-#foodCheckbox:not(:checked) ~ label .price {
+#Checkbox-starter-1:not(:checked) ~ label .price,
+#Checkbox-starter-2:not(:checked) ~ label .price,
+#Checkbox-starter-3:not(:checked) ~ label .price,
+#Checkbox-starter-4:not(:checked) ~ label .price,
+#Checkbox-course-1:not(:checked) ~ label .price,
+#Checkbox-course-2:not(:checked) ~ label .price,
+#Checkbox-course-3:not(:checked) ~ label .price,
+#Checkbox-dessert-1:not(:checked) ~ label .price,
+#Checkbox-dessert-2:not(:checked) ~ label .price,
+#Checkbox-dessert-3:not(:checked) ~ label .price {
   right: 0px;
 }
 
-.food-checked:active .food-specificity {
-  width: 250px;
+.food-specificity {
+  width: 270px;
   white-space: nowrap;
+  transition: width 0.4s ease-out;
+}
+
+#Checkbox-starter-1:checked ~ label .food-specificity,
+#Checkbox-starter-2:checked ~ label .food-specificity,
+#Checkbox-starter-3:checked ~ label .food-specificity,
+#Checkbox-starter-4:checked ~ label .food-specificity,
+#Checkbox-course-1:checked ~ label .food-specificity,
+#Checkbox-course-2:checked ~ label .food-specificity,
+#Checkbox-course-3:checked ~ label .food-specificity,
+#Checkbox-dessert-1:checked ~ label .food-specificity,
+#Checkbox-dessert-2:checked ~ label .food-specificity,
+#Checkbox-dessert-3:checked ~ label .food-specificity {
+  width: 220px;
   overflow: hidden;
   text-overflow: ellipsis;
-  box-sizing: content-box;
+}
+
+.food-name-selection h3 {
+  width: 290px;
+  white-space: nowrap;
+  transition: width 0.4s ease-out;
+}
+
+#Checkbox-starter-1:checked ~ label h3,
+#Checkbox-starter-2:checked ~ label h3,
+#Checkbox-starter-3:checked ~ label h3,
+#Checkbox-starter-4:checked ~ label h3,
+#Checkbox-course-1:checked ~ label h3,
+#Checkbox-course-2:checked ~ label h3,
+#Checkbox-course-3:checked ~ label h3,
+#Checkbox-dessert-1:checked ~ label h3,
+#Checkbox-dessert-2:checked ~ label h3,
+#Checkbox-dessert-3:checked ~ label h3 {
+  width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /************FOOTER A**********/
@@ -718,7 +734,6 @@ svg path {
   color: #9747FF;
 }
 
-.fa-heart,
 .fa-location-dot {
   color: black;
 }

@@ -44,7 +44,6 @@ h2 {
     font-weight:300;
     font-family: 'Roboto', sans-serif;
     font-size:16px;
-    padding-top:30px;
     padding-bottom:5px;
     margin-left:4%;
     margin-bottom:10px;
@@ -53,6 +52,10 @@ h2 {
         width:6%;
         margin-left:6%;
     }
+}
+
+.section-prestentation-restaurant {
+    height:1220px;
 }
 
 .section-prestentation-restaurant,
@@ -81,7 +84,7 @@ h2 {
 }
 
 .section-prestentation-restaurant--long-menu {
-    height:1180px;
+    height:1200px;
     @media (min-width:$breakpoint-desktop) {
         height:1160px;
     }
@@ -92,7 +95,6 @@ h2 {
 }
 
 .fa-heart {
-    position:initial;
     padding-left:33px;
     text-align: center;
     @media (min-width:$breakpoint-desktop) {
@@ -101,6 +103,8 @@ h2 {
 }
 
 .container_menu {
+    width:97%;
+    margin-left:1.5%;
     @media (min-width:$breakpoint-desktop) {
     box-sizing:border-box;
     width:67.5%;
@@ -109,6 +113,7 @@ h2 {
         display:flex;
         flex-direction:column;
         align-items:center;
+        padding-bottom:25px;
     }
 }
 
@@ -146,7 +151,6 @@ h2 {
 .button_container {
     display:flex;
     justify-content:center;
-    padding-top:35px;
     padding-bottom:35px;
     .button-command {
         font-size:17px;
@@ -159,10 +163,14 @@ h2 {
 
 .footer {
     position:absolute;
-    top:1376px;
+    top:1380px;
     width:100%;
     z-index:1;
     @media (min-width:$breakpoint-desktop) {
         top:1570px;
     }
+}
+
+.footer--long-menu {
+    top:1460px;
 }
