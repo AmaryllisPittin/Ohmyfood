@@ -83,6 +83,10 @@ body {
 }
 
 /******************HEARTS*****************/
+.restaurants_name_and_icon {
+    position:relative;
+}
+
 .fa-heart {
     font-size:1.5em;
 }
@@ -93,14 +97,15 @@ body {
 }
 
 .fa-heart-solid-position {
-   position:relative;
-   right:30px;
+   position:absolute;
+   right:5%;
+   top:3%;
 }
 
 .fa-heart-regular-position {
-    position:relative;
-    left:3%;
-    top:0px;
+    position:absolute;
+    right:5%;
+    top:3%;
 }
 
 .fa-solid.fa-heart {
@@ -215,6 +220,7 @@ svg {
 
 /***************CHECK-MENU**************/ 
   .food-name-selection {
+    position:relative;
     width:650px;
     height:43px;
     background-color:white;
@@ -313,8 +319,10 @@ svg {
 }
 
 .food-specificity {
-    width:270px;
+    min-width:120px;
     white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
     transition: width 0.4s ease-out;
 }
 
@@ -328,14 +336,16 @@ svg {
 #Checkbox-dessert-1:checked ~ label .food-specificity,
 #Checkbox-dessert-2:checked ~ label .food-specificity,
 #Checkbox-dessert-3:checked ~ label .food-specificity {
-    width:220px;
+    width:170px;
     overflow:hidden;
     text-overflow:ellipsis;
 }
 
-.food-name-selection h3 {
-    width:290px;
+label h3 {
+    min-width:90px;
     white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
     transition: width 0.4s ease-out;
 }
 
@@ -349,7 +359,8 @@ svg {
 #Checkbox-dessert-1:checked ~ label h3,
 #Checkbox-dessert-2:checked ~ label h3,
 #Checkbox-dessert-3:checked ~ label h3 {
-    width:240px;
+    min-width:70px;
+    max-width: 140px;
     overflow:hidden;
     text-overflow:ellipsis;
 }
