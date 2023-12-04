@@ -1,4 +1,4 @@
-$breakpoint-desktop: 1440px;
+$breakpoint-desktop: 1024px;
 
 /*************BODY AND ELEMENTS APPARITIONS*******************/
 body {
@@ -110,16 +110,18 @@ body {
 
 .fa-solid.fa-heart {
     visibility:hidden;
+    opacity:0;
     background-clip:text;
     -webkit-background-clip:text;
     color:transparent;
     background-image: linear-gradient(rgb(219, 112, 223) 30%, #9747FF);
     z-index:2;
-    transition:visibility;
+    transition: visibility 0s, opacity 1s;
 }
 
 .fa-regular:active ~ .fa-solid {
     visibility:visible;
+    opacity:1;
 }
 
 /*******************LOADER*******************/
@@ -242,7 +244,7 @@ svg {
     right:0;
     border-top-right-radius:20px;
     border-bottom-right-radius:20px;
-    padding:19px 18px 20px 18px;
+    padding:19px 18px 23px 18px;
     font-size:25px;
     transition: right 0.3s ease-out;
 }

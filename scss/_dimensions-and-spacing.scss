@@ -1,5 +1,5 @@
 /***MIXINS AND VALUES***/
-$breakpoint-desktop: 1440px;
+$breakpoint-desktop: 1024px;
 
 @mixin main-padding-bottom {
     padding-bottom:30px;
@@ -86,8 +86,8 @@ $breakpoint-desktop: 1440px;
     @include main-section-padding;
     @media (min-width:$breakpoint-desktop) {
         align-items:normal;
-        width:74.5%;
-        margin-left:13.5%;
+        width:79.5%;
+        margin-left:10.5%;
         box-sizing:border-box;
         padding-top:48px;
         @include main-padding-bottom;
@@ -110,13 +110,14 @@ $breakpoint-desktop: 1440px;
         margin-right:3.5%;
         margin-left:0;
         width:290px;
-        padding:35px 55px 20px 12px;
+        padding:35px 30px 20px 12px;
     }
     p {
         padding-left:20px;
+        white-space:nowrap;
         font-weight:500;
         @media (min-width:$breakpoint-desktop) {
-            padding-left:27px;
+            padding-left:17px;
         }
     }
     span {

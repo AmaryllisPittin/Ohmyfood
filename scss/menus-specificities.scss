@@ -1,21 +1,23 @@
-$breakpoint-desktop: 1440px;
+$breakpoint-desktop: 1024px;
 
 .header {
     display:flex;
-    justify-content:flex-start;
+    justify-content:center;
+    align-items:center;
+    position: relative;
     @media (min-width:$breakpoint-desktop) {
         z-index:2;
         background-color: white;
     }
     .ohmyfood-logo {
-        display:flex;
-        justify-content: center;
-        width:85%;
+        max-width:100%;
+        height:auto;
     }
     .fa-arrow-left {
-        padding-top:32px;
-        padding-right:70px;
-        padding-left:25px;
+        position:fixed;
+        left:25px;
+        top:32px;
+        transform:translateY(-50%);
         @media (min-width:$breakpoint-desktop) {
             padding-top:47px;
             }
