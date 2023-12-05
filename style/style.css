@@ -465,7 +465,6 @@ body {
 }
 
 .fa-solid.fa-heart {
-  visibility: hidden;
   opacity: 0;
   background-clip: text;
   -webkit-background-clip: text;
@@ -475,9 +474,16 @@ body {
   transition: visibility 0s, opacity 1s;
 }
 
-.fa-regular:active ~ .fa-solid {
-  visibility: visible;
-  opacity: 1;
+@keyframes fillAnimation {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.fa-solid.fa-heart:active {
+  animation: fillAnimation 1s;
 }
 
 /*******************LOADER*******************/
@@ -596,6 +602,113 @@ svg path {
   transition: right 0.3s ease-out;
 }
 
+/**********W3C vive la vie et vive la France********/
+.food-name-selection input[type=checkbox]:checked + .food-checked,
+#Checkbox-starter-2:checked .food-checked,
+#Checkbox-starter-3:checked .food-checked,
+#Checkbox-starter-4:checked .food-checked,
+#Checkbox-course-1:checked .food-checked,
+#Checkbox-course-2:checked .food-checked,
+#Checkbox-course-3:checked .food-checked,
+#Checkbox-dessert-1:checked .food-checked,
+#Checkbox-dessert-2:checked .food-checked,
+#Checkbox-dessert-3:checked .food-checked {
+  right: 0;
+}
+
+.food-name-selection input[type=checkbox]:not(:checked) + .food-checked,
+#Checkbox-starter-1:not(:checked) .food-checked,
+#Checkbox-starter-2:not(:checked) .food-checked,
+#Checkbox-starter-3:not(:checked) .food-checked,
+#Checkbox-starter-4:not(:checked) .food-checked,
+#Checkbox-course-1:not(:checked) .food-checked,
+#Checkbox-course-2:not(:checked) .food-checked,
+#Checkbox-course-3:not(:checked) .food-checked,
+#Checkbox-dessert-1:not(:checked) .food-checked,
+#Checkbox-dessert-2:not(:checked) .food-checked,
+#Checkbox-dessert-3:not(:checked) .food-checked {
+  right: -80px;
+}
+
+#Checkbox-starter-1,
+#Checkbox-starter-2,
+#Checkbox-starter-3,
+#Checkbox-starter-4,
+#Checkbox-course-1,
+#Checkbox-course-2,
+#Checkbox-course-3,
+#Checkbox-dessert-1,
+#Checkbox-dessert-2,
+#Checkbox-dessert-3 {
+  display: none;
+}
+
+#Checkbox-starter-1:checked .price,
+#Checkbox-starter-2:checked .price,
+#Checkbox-starter-3:checked .price,
+#Checkbox-starter-4:checked .price,
+#Checkbox-course-1:checked .price,
+#Checkbox-course-2:checked .price,
+#Checkbox-course-3:checked .price,
+#Checkbox-dessert-1:checked .price,
+#Checkbox-dessert-2:checked .price,
+#Checkbox-dessert-3:checked .price {
+  right: 65px;
+}
+
+#Checkbox-starter-1:not(:checked) .price,
+#Checkbox-starter-2:not(:checked) .price,
+#Checkbox-starter-3:not(:checked) .price,
+#Checkbox-starter-4:not(:checked) .price,
+#Checkbox-course-1:not(:checked) .price,
+#Checkbox-course-2:not(:checked) .price,
+#Checkbox-course-3:not(:checked) .price,
+#Checkbox-dessert-1:not(:checked) .price,
+#Checkbox-dessert-2:not(:checked) .price,
+#Checkbox-dessert-3:not(:checked) .price {
+  right: 0px;
+}
+
+#Checkbox-starter-1:checked .food-specificity,
+#Checkbox-starter-2:checked .food-specificity,
+#Checkbox-starter-3:checked .food-specificity,
+#Checkbox-starter-4:checked .food-specificity,
+#Checkbox-course-1:checked .food-specificity,
+#Checkbox-course-2:checked .food-specificity,
+#Checkbox-course-3:checked .food-specificity,
+#Checkbox-dessert-1:checked .food-specificity,
+#Checkbox-dessert-2:checked .food-specificity,
+#Checkbox-dessert-3:checked .food-specificity {
+  width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+h3 {
+  min-width: 90px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: width 0.4s ease-out;
+}
+
+#Checkbox-starter-1:checked h3,
+#Checkbox-starter-2:checked h3,
+#Checkbox-starter-3:checked h3,
+#Checkbox-starter-4:checked h3,
+#Checkbox-course-1:checked h3,
+#Checkbox-course-2:checked h3,
+#Checkbox-course-3:checked h3,
+#Checkbox-dessert-1:checked h3,
+#Checkbox-dessert-2:checked h3,
+#Checkbox-dessert-3:checked h3 {
+  min-width: 70px;
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/***********W3C FIN********************************/
 #Checkbox-starter-1:checked ~ label .food-checked,
 #Checkbox-starter-2:checked ~ label .food-checked,
 #Checkbox-starter-3:checked ~ label .food-checked,
@@ -641,7 +754,7 @@ svg path {
   transition: right 0.3s ease-out;
 }
 
-#Checkbox-starter-1:checked ~ label .price,
+/*#Checkbox-starter-1:checked ~ label .price,
 #Checkbox-starter-2:checked ~ label .price,
 #Checkbox-starter-3:checked ~ label .price,
 #Checkbox-starter-4:checked ~ label .price,
@@ -651,7 +764,7 @@ svg path {
 #Checkbox-dessert-1:checked ~ label .price,
 #Checkbox-dessert-2:checked ~ label .price,
 #Checkbox-dessert-3:checked ~ label .price {
-  right: 65px;
+    right:65px;
 }
 
 #Checkbox-starter-1:not(:checked) ~ label .price,
@@ -664,9 +777,8 @@ svg path {
 #Checkbox-dessert-1:not(:checked) ~ label .price,
 #Checkbox-dessert-2:not(:checked) ~ label .price,
 #Checkbox-dessert-3:not(:checked) ~ label .price {
-  right: 0px;
-}
-
+    right:0px;
+}*/
 .food-specificity {
   min-width: 120px;
   white-space: nowrap;
@@ -675,7 +787,7 @@ svg path {
   transition: width 0.4s ease-out;
 }
 
-#Checkbox-starter-1:checked ~ label .food-specificity,
+/*#Checkbox-starter-1:checked ~ label .food-specificity,
 #Checkbox-starter-2:checked ~ label .food-specificity,
 #Checkbox-starter-3:checked ~ label .food-specificity,
 #Checkbox-starter-4:checked ~ label .food-specificity,
@@ -685,20 +797,20 @@ svg path {
 #Checkbox-dessert-1:checked ~ label .food-specificity,
 #Checkbox-dessert-2:checked ~ label .food-specificity,
 #Checkbox-dessert-3:checked ~ label .food-specificity {
-  width: 170px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    width:170px;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
 
-label h3 {
-  min-width: 90px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transition: width 0.4s ease-out;
+/*label h3 {
+    min-width:90px;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    transition: width 0.4s ease-out;
 }
 
-#Checkbox-starter-1:checked ~ label h3,
+/*#Checkbox-starter-1:checked ~ label h3,
 #Checkbox-starter-2:checked ~ label h3,
 #Checkbox-starter-3:checked ~ label h3,
 #Checkbox-starter-4:checked ~ label h3,
@@ -708,11 +820,12 @@ label h3 {
 #Checkbox-dessert-1:checked ~ label h3,
 #Checkbox-dessert-2:checked ~ label h3,
 #Checkbox-dessert-3:checked ~ label h3 {
-  min-width: 70px;
-  max-width: 140px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    min-width:70px;
+    max-width: 140px;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
+
 
 /************FOOTER A**********/
 .footer a {
