@@ -1,9 +1,21 @@
 /***IMPORT***/
+@media (min-width: 1024px) {
+  .div_restaurants-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
 .header,
 .section_location,
 .section_menu-selection {
   display: flex;
   justify-content: center;
+}
+
+.food-specificity-and-price {
+  justify-content: space-between;
 }
 
 .section_menu-selection,
@@ -15,7 +27,9 @@
   flex-direction: column;
 }
 
-.div_functioning-order {
+.div_functioning-order,
+.section_location,
+.food-specificity-and-price {
   display: flex;
   flex-direction: row;
 }
@@ -25,6 +39,12 @@
   align-items: center;
 }
 
+@media (min-width: 1024px) {
+  .section_functioning {
+    align-items: normal;
+  }
+}
+
 .section_menu-selection {
   text-align: center;
 }
@@ -32,13 +52,16 @@
 .header,
 .section_location,
 .div_functioning-order span,
-.div_restaurants-cards .article-cards {
+.div_restaurants-cards .article-cards,
+.food-name-selection {
   position: relative;
 }
 
 .div_restaurants-cards .article__span_new,
 .fa-heart,
-.section-prestentation-restaurant {
+.section-prestentation-restaurant,
+.fa-heart-solid-position,
+.fa-heart-regular-position {
   position: absolute;
 }
 
@@ -74,6 +97,9 @@
   .footer {
     flex-direction: row-reverse;
   }
+}
+.footer .footer_all_links {
+  justify-content: flex-end;
 }
 
 /***MIXINS AND VALUES***/
@@ -112,9 +138,6 @@
 
 .section_location {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
 .section_location .input-text {
   margin: 15px 0px 15px 17px;
@@ -163,7 +186,6 @@
 }
 @media (min-width: 1024px) {
   .section_functioning {
-    align-items: normal;
     width: 79.5%;
     margin-left: 10.5%;
     box-sizing: border-box;
@@ -197,8 +219,6 @@
 }
 .div_functioning-order p {
   padding-left: 20px;
-  white-space: nowrap;
-  font-weight: 500;
 }
 @media (min-width: 1024px) {
   .div_functioning-order p {
@@ -250,9 +270,6 @@
 
 @media (min-width: 1024px) {
   .div_restaurants-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     width: 100%;
     -moz-column-gap: 100px;
          column-gap: 100px;
@@ -277,7 +294,6 @@
 }
 .div_restaurants-cards .article__span_new {
   font-size: 14px;
-  font-weight: 500;
   padding: 5px 13px 5px 13px;
   right: 15px;
   bottom: 210px;
@@ -291,6 +307,12 @@
 .fa-heart {
   right: 25px;
   bottom: 35px;
+}
+
+.fa-heart-solid-position,
+.fa-heart-regular-position {
+  right: 5%;
+  top: 3%;
 }
 
 .footer {
@@ -308,18 +330,9 @@
 .footer div {
   padding-bottom: 8px;
 }
-@media (min-width: 1024px) {
-  .footer .footer_all_links {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-}
 
 .footer__h1 {
-  font-family: "Shrikhand", serif;
   font-size: 18px;
-  font-weight: 300;
   margin-bottom: 17px;
 }
 @media (min-width: 1024px) {
@@ -431,7 +444,7 @@ body {
 }
 
 .div_functioning-order:hover i {
-  color: #9747FF;
+  color: #9356DC;
 }
 
 .div_restaurants-cards a {
@@ -439,29 +452,9 @@ body {
 }
 
 /******************HEARTS*****************/
-.restaurants_name_and_icon {
-  position: relative;
-}
-
-.fa-heart {
-  font-size: 1.5em;
-}
-
 .fa-regular {
-  color: black;
   z-index: 3;
-}
-
-.fa-heart-solid-position {
-  position: absolute;
-  right: 5%;
-  top: 3%;
-}
-
-.fa-heart-regular-position {
-  position: absolute;
-  right: 5%;
-  top: 3%;
+  cursor: pointer;
 }
 
 .fa-solid.fa-heart {
@@ -469,21 +462,26 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(rgb(219, 112, 223) 30%, #9747FF);
+  background-image: linear-gradient(#FF79DA 30%, #9356DC);
   z-index: 2;
-  transition: visibility 0s, opacity 1s;
 }
 
 @keyframes fillAnimation {
   0% {
-    transform: scaleY(0);
+    opacity: 0;
+    z-index: 2;
+  }
+  50% {
+    opacity: 1;
+    z-index: 3;
   }
   100% {
-    transform: scaleY(1);
+    opacity: 0;
+    z-index: 3;
   }
 }
-.fa-solid.fa-heart:active {
-  animation: fillAnimation 1s;
+.all_icons_hearts:active .fa-solid.fa-heart {
+  animation: fillAnimation 0.7s;
 }
 
 /*******************LOADER*******************/
@@ -500,12 +498,12 @@ body {
 }
 
 .first-stop {
-  stop-color: rgb(219, 112, 223);
+  stop-color: #FF79DA;
   stop-opacity: 1;
 }
 
 .second-stop {
-  stop-color: #9747FF;
+  stop-color: #9356DC;
   stop-opacity: 1;
 }
 
@@ -574,21 +572,8 @@ svg path {
   }
 }
 /***************CHECK-MENU**************/
-.food-name-selection {
-  position: relative;
-  width: 650px;
-  height: 43px;
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.2);
-  z-index: 0;
-  overflow: hidden;
-}
-
-.food-specificity-and-price {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.food-specificity {
+  transition: width 0.3s ease-out, overflow 0.3s ease-out, text-overflow 0.3s ease-out;
 }
 
 .food-checked {
@@ -602,149 +587,153 @@ svg path {
   transition: right 0.3s ease-out;
 }
 
-/**********W3C vive la vie et vive la France********/
-.food-name-selection input[type=checkbox]:checked + .food-checked,
-#Checkbox-starter-2:checked .food-checked,
-#Checkbox-starter-3:checked .food-checked,
-#Checkbox-starter-4:checked .food-checked,
-#Checkbox-course-1:checked .food-checked,
-#Checkbox-course-2:checked .food-checked,
-#Checkbox-course-3:checked .food-checked,
-#Checkbox-dessert-1:checked .food-checked,
-#Checkbox-dessert-2:checked .food-checked,
-#Checkbox-dessert-3:checked .food-checked {
+.price {
+  position: relative;
+  transition: right 0.3s ease-out;
+}
+
+/*****EACH, FOR and IF*****/
+#Checkbox-starter-1::checked ~ label .food-checked {
   right: 0;
 }
 
-.food-name-selection input[type=checkbox]:not(:checked) + .food-checked,
-#Checkbox-starter-1:not(:checked) .food-checked,
-#Checkbox-starter-2:not(:checked) .food-checked,
-#Checkbox-starter-3:not(:checked) .food-checked,
-#Checkbox-starter-4:not(:checked) .food-checked,
-#Checkbox-course-1:not(:checked) .food-checked,
-#Checkbox-course-2:not(:checked) .food-checked,
-#Checkbox-course-3:not(:checked) .food-checked,
-#Checkbox-dessert-1:not(:checked) .food-checked,
-#Checkbox-dessert-2:not(:checked) .food-checked,
-#Checkbox-dessert-3:not(:checked) .food-checked {
+#Checkbox-starter-1:not(:checked) ~ label .food-checked {
   right: -80px;
 }
 
-#Checkbox-starter-1,
-#Checkbox-starter-2,
-#Checkbox-starter-3,
-#Checkbox-starter-4,
-#Checkbox-course-1,
-#Checkbox-course-2,
-#Checkbox-course-3,
-#Checkbox-dessert-1,
-#Checkbox-dessert-2,
-#Checkbox-dessert-3 {
-  display: none;
-}
-
-#Checkbox-starter-1:checked .price,
-#Checkbox-starter-2:checked .price,
-#Checkbox-starter-3:checked .price,
-#Checkbox-starter-4:checked .price,
-#Checkbox-course-1:checked .price,
-#Checkbox-course-2:checked .price,
-#Checkbox-course-3:checked .price,
-#Checkbox-dessert-1:checked .price,
-#Checkbox-dessert-2:checked .price,
-#Checkbox-dessert-3:checked .price {
-  right: 65px;
-}
-
-#Checkbox-starter-1:not(:checked) .price,
-#Checkbox-starter-2:not(:checked) .price,
-#Checkbox-starter-3:not(:checked) .price,
-#Checkbox-starter-4:not(:checked) .price,
-#Checkbox-course-1:not(:checked) .price,
-#Checkbox-course-2:not(:checked) .price,
-#Checkbox-course-3:not(:checked) .price,
-#Checkbox-dessert-1:not(:checked) .price,
-#Checkbox-dessert-2:not(:checked) .price,
-#Checkbox-dessert-3:not(:checked) .price {
-  right: 0px;
-}
-
-#Checkbox-starter-1:checked .food-specificity,
-#Checkbox-starter-2:checked .food-specificity,
-#Checkbox-starter-3:checked .food-specificity,
-#Checkbox-starter-4:checked .food-specificity,
-#Checkbox-course-1:checked .food-specificity,
-#Checkbox-course-2:checked .food-specificity,
-#Checkbox-course-3:checked .food-specificity,
-#Checkbox-dessert-1:checked .food-specificity,
-#Checkbox-dessert-2:checked .food-specificity,
-#Checkbox-dessert-3:checked .food-specificity {
-  width: 170px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-h3 {
-  min-width: 90px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transition: width 0.4s ease-out;
-}
-
-#Checkbox-starter-1:checked h3,
-#Checkbox-starter-2:checked h3,
-#Checkbox-starter-3:checked h3,
-#Checkbox-starter-4:checked h3,
-#Checkbox-course-1:checked h3,
-#Checkbox-course-2:checked h3,
-#Checkbox-course-3:checked h3,
-#Checkbox-dessert-1:checked h3,
-#Checkbox-dessert-2:checked h3,
-#Checkbox-dessert-3:checked h3 {
-  min-width: 70px;
-  max-width: 140px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/***********W3C FIN********************************/
-#Checkbox-starter-1:checked ~ label .food-checked,
-#Checkbox-starter-2:checked ~ label .food-checked,
-#Checkbox-starter-3:checked ~ label .food-checked,
-#Checkbox-starter-4:checked ~ label .food-checked,
-#Checkbox-course-1:checked ~ label .food-checked,
-#Checkbox-course-2:checked ~ label .food-checked,
-#Checkbox-course-3:checked ~ label .food-checked,
-#Checkbox-dessert-1:checked ~ label .food-checked,
-#Checkbox-dessert-2:checked ~ label .food-checked,
-#Checkbox-dessert-3:checked ~ label .food-checked {
+#Checkbox-starter-2::checked ~ label .food-checked {
   right: 0;
 }
 
-#Checkbox-starter-1:not(:checked) ~ label .food-checked,
-#Checkbox-starter-2:not(:checked) ~ label .food-checked,
-#Checkbox-starter-3:not(:checked) ~ label .food-checked,
-#Checkbox-starter-4:not(:checked) ~ label .food-checked,
-#Checkbox-course-1:not(:checked) ~ label .food-checked,
-#Checkbox-course-2:not(:checked) ~ label .food-checked,
-#Checkbox-course-3:not(:checked) ~ label .food-checked,
-#Checkbox-dessert-1:not(:checked) ~ label .food-checked,
-#Checkbox-dessert-2:not(:checked) ~ label .food-checked,
+#Checkbox-starter-2:not(:checked) ~ label .food-checked {
+  right: -80px;
+}
+
+#Checkbox-starter-3::checked ~ label .food-checked {
+  right: 0;
+}
+
+#Checkbox-starter-3:not(:checked) ~ label .food-checked {
+  right: -80px;
+}
+
+#Checkbox-starter-4::checked ~ label .food-checked {
+  right: 0;
+}
+
+#Checkbox-starter-4:not(:checked) ~ label .food-checked {
+  right: -80px;
+}
+
+#Checkbox-course-1::checked ~ label .food-checked {
+  right: 0;
+}
+
+#Checkbox-course-1:not(:checked) ~ label .food-checked {
+  right: -80px;
+}
+
+#Checkbox-course-2::checked ~ label .food-checked {
+  right: 0;
+}
+
+#Checkbox-course-2:not(:checked) ~ label .food-checked {
+  right: -80px;
+}
+
+#Checkbox-course-3::checked ~ label .food-checked {
+  right: 0;
+}
+
+#Checkbox-course-3:not(:checked) ~ label .food-checked {
+  right: -80px;
+}
+
+#Checkbox-course-4::checked ~ label .food-checked {
+  right: 0;
+}
+
+#Checkbox-course-4:not(:checked) ~ label .food-checked {
+  right: -80px;
+}
+
+#Checkbox-dessert-1::checked ~ label .food-checked {
+  right: 0;
+}
+
+#Checkbox-dessert-1:not(:checked) ~ label .food-checked {
+  right: -80px;
+}
+
+#Checkbox-dessert-2::checked ~ label .food-checked {
+  right: 0;
+}
+
+#Checkbox-dessert-2:not(:checked) ~ label .food-checked {
+  right: -80px;
+}
+
+#Checkbox-dessert-3::checked ~ label .food-checked {
+  right: 0;
+}
+
 #Checkbox-dessert-3:not(:checked) ~ label .food-checked {
   right: -80px;
 }
 
-#Checkbox-starter-1,
-#Checkbox-starter-2,
-#Checkbox-starter-3,
-#Checkbox-starter-4,
-#Checkbox-course-1,
-#Checkbox-course-2,
-#Checkbox-course-3,
-#Checkbox-dessert-1,
-#Checkbox-dessert-2,
+#Checkbox-dessert-4::checked ~ label .food-checked {
+  right: 0;
+}
+
+#Checkbox-dessert-4:not(:checked) ~ label .food-checked {
+  right: -80px;
+}
+
+#Checkbox-starter-1 {
+  display: none;
+}
+
+#Checkbox-starter-2 {
+  display: none;
+}
+
+#Checkbox-starter-3 {
+  display: none;
+}
+
+#Checkbox-starter-4 {
+  display: none;
+}
+
+#Checkbox-course-1 {
+  display: none;
+}
+
+#Checkbox-course-2 {
+  display: none;
+}
+
+#Checkbox-course-3 {
+  display: none;
+}
+
+#Checkbox-course-4 {
+  display: none;
+}
+
+#Checkbox-dessert-1 {
+  display: none;
+}
+
+#Checkbox-dessert-2 {
+  display: none;
+}
+
 #Checkbox-dessert-3 {
+  display: none;
+}
+
+#Checkbox-dessert-4 {
   display: none;
 }
 
@@ -754,31 +743,102 @@ h3 {
   transition: right 0.3s ease-out;
 }
 
-/*#Checkbox-starter-1:checked ~ label .price,
-#Checkbox-starter-2:checked ~ label .price,
-#Checkbox-starter-3:checked ~ label .price,
-#Checkbox-starter-4:checked ~ label .price,
-#Checkbox-course-1:checked ~ label .price,
-#Checkbox-course-2:checked ~ label .price,
-#Checkbox-course-3:checked ~ label .price,
-#Checkbox-dessert-1:checked ~ label .price,
-#Checkbox-dessert-2:checked ~ label .price,
-#Checkbox-dessert-3:checked ~ label .price {
-    right:65px;
+#Checkbox-starter-1:checked ~ label .price {
+  right: 65px;
 }
 
-#Checkbox-starter-1:not(:checked) ~ label .price,
-#Checkbox-starter-2:not(:checked) ~ label .price,
-#Checkbox-starter-3:not(:checked) ~ label .price,
-#Checkbox-starter-4:not(:checked) ~ label .price,
-#Checkbox-course-1:not(:checked) ~ label .price,
-#Checkbox-course-2:not(:checked) ~ label .price,
-#Checkbox-course-3:not(:checked) ~ label .price,
-#Checkbox-dessert-1:not(:checked) ~ label .price,
-#Checkbox-dessert-2:not(:checked) ~ label .price,
+#Checkbox-starter-1:not(:checked) ~ label .price {
+  right: 0;
+}
+
+#Checkbox-starter-2:checked ~ label .price {
+  right: 65px;
+}
+
+#Checkbox-starter-2:not(:checked) ~ label .price {
+  right: 0;
+}
+
+#Checkbox-starter-3:checked ~ label .price {
+  right: 65px;
+}
+
+#Checkbox-starter-3:not(:checked) ~ label .price {
+  right: 0;
+}
+
+#Checkbox-starter-4:checked ~ label .price {
+  right: 65px;
+}
+
+#Checkbox-starter-4:not(:checked) ~ label .price {
+  right: 0;
+}
+
+#Checkbox-course-1:checked ~ label .price {
+  right: 65px;
+}
+
+#Checkbox-course-1:not(:checked) ~ label .price {
+  right: 0;
+}
+
+#Checkbox-course-2:checked ~ label .price {
+  right: 65px;
+}
+
+#Checkbox-course-2:not(:checked) ~ label .price {
+  right: 0;
+}
+
+#Checkbox-course-3:checked ~ label .price {
+  right: 65px;
+}
+
+#Checkbox-course-3:not(:checked) ~ label .price {
+  right: 0;
+}
+
+#Checkbox-course-4:checked ~ label .price {
+  right: 65px;
+}
+
+#Checkbox-course-4:not(:checked) ~ label .price {
+  right: 0;
+}
+
+#Checkbox-dessert-1:checked ~ label .price {
+  right: 65px;
+}
+
+#Checkbox-dessert-1:not(:checked) ~ label .price {
+  right: 0;
+}
+
+#Checkbox-dessert-2:checked ~ label .price {
+  right: 65px;
+}
+
+#Checkbox-dessert-2:not(:checked) ~ label .price {
+  right: 0;
+}
+
+#Checkbox-dessert-3:checked ~ label .price {
+  right: 65px;
+}
+
 #Checkbox-dessert-3:not(:checked) ~ label .price {
-    right:0px;
-}*/
+  right: 0;
+}
+
+#Checkbox-dessert-4:checked ~ label .price {
+  right: 65px;
+}
+
+#Checkbox-dessert-4:not(:checked) ~ label .price {
+  right: 0;
+}
+
 .food-specificity {
   min-width: 120px;
   white-space: nowrap;
@@ -787,52 +847,143 @@ h3 {
   transition: width 0.4s ease-out;
 }
 
-/*#Checkbox-starter-1:checked ~ label .food-specificity,
-#Checkbox-starter-2:checked ~ label .food-specificity,
-#Checkbox-starter-3:checked ~ label .food-specificity,
-#Checkbox-starter-4:checked ~ label .food-specificity,
-#Checkbox-course-1:checked ~ label .food-specificity,
-#Checkbox-course-2:checked ~ label .food-specificity,
-#Checkbox-course-3:checked ~ label .food-specificity,
-#Checkbox-dessert-1:checked ~ label .food-specificity,
-#Checkbox-dessert-2:checked ~ label .food-specificity,
+#Checkbox-starter-1:checked ~ label .food-specificity {
+  width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#Checkbox-starter-2:checked ~ label .food-specificity {
+  width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#Checkbox-starter-3:checked ~ label .food-specificity {
+  width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#Checkbox-starter-4:checked ~ label .food-specificity {
+  width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#Checkbox-course-1:checked ~ label .food-specificity {
+  width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#Checkbox-course-2:checked ~ label .food-specificity {
+  width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#Checkbox-course-3:checked ~ label .food-specificity {
+  width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#Checkbox-course-4:checked ~ label .food-specificity {
+  width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#Checkbox-dessert-1:checked ~ label .food-specificity {
+  width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#Checkbox-dessert-2:checked ~ label .food-specificity {
+  width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 #Checkbox-dessert-3:checked ~ label .food-specificity {
-    width:170px;
-    overflow:hidden;
-    text-overflow:ellipsis;
+  width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/*label h3 {
-    min-width:90px;
-    white-space: nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    transition: width 0.4s ease-out;
+#Checkbox-dessert-4:checked ~ label .food-specificity {
+  width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/*#Checkbox-starter-1:checked ~ label h3,
-#Checkbox-starter-2:checked ~ label h3,
-#Checkbox-starter-3:checked ~ label h3,
-#Checkbox-starter-4:checked ~ label h3,
-#Checkbox-course-1:checked ~ label h3,
-#Checkbox-course-2:checked ~ label h3,
-#Checkbox-course-3:checked ~ label h3,
-#Checkbox-dessert-1:checked ~ label h3,
-#Checkbox-dessert-2:checked ~ label h3,
-#Checkbox-dessert-3:checked ~ label h3 {
-    min-width:70px;
-    max-width: 140px;
-    overflow:hidden;
-    text-overflow:ellipsis;
+label .food-name-selection__title {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-
-/************FOOTER A**********/
-.footer a {
-  transition: brightness 0.3s;
+#Checkbox-starter-1:checked ~ label .food-name-selection__title {
+  min-width: 70px;
+  max-width: 140px;
 }
-.footer a:hover {
-  filter: brightness(1.3);
+
+#Checkbox-starter-2:checked ~ label .food-name-selection__title {
+  min-width: 70px;
+  max-width: 140px;
+}
+
+#Checkbox-starter-3:checked ~ label .food-name-selection__title {
+  min-width: 70px;
+  max-width: 140px;
+}
+
+#Checkbox-starter-4:checked ~ label .food-name-selection__title {
+  min-width: 70px;
+  max-width: 140px;
+}
+
+#Checkbox-course-1:checked ~ label .food-name-selection__title {
+  min-width: 70px;
+  max-width: 140px;
+}
+
+#Checkbox-course-2:checked ~ label .food-name-selection__title {
+  min-width: 70px;
+  max-width: 140px;
+}
+
+#Checkbox-course-3:checked ~ label .food-name-selection__title {
+  min-width: 70px;
+  max-width: 140px;
+}
+
+#Checkbox-course-4:checked ~ label .food-name-selection__title {
+  min-width: 70px;
+  max-width: 140px;
+}
+
+#Checkbox-dessert-1:checked ~ label .food-name-selection__title {
+  min-width: 70px;
+  max-width: 140px;
+}
+
+#Checkbox-dessert-2:checked ~ label .food-name-selection__title {
+  min-width: 70px;
+  max-width: 140px;
+}
+
+#Checkbox-dessert-3:checked ~ label .food-name-selection__title {
+  min-width: 70px;
+  max-width: 140px;
+}
+
+#Checkbox-dessert-4:checked ~ label .food-name-selection__title {
+  min-width: 70px;
+  max-width: 140px;
 }
 
 /***COLOR VALUES***/
@@ -858,10 +1009,11 @@ h3 {
 }
 
 .fa-store:hover {
-  color: #9747FF;
+  color: #9356DC;
 }
 
-.fa-location-dot {
+.fa-location-dot,
+.fa-regular {
   color: black;
 }
 
@@ -880,7 +1032,8 @@ h3 {
 }
 
 /*BACKGROUND-COLOR*/
-.article-cards {
+.article-cards,
+.food-name-selection {
   background-color: white;
 }
 
@@ -895,11 +1048,11 @@ h3 {
 }
 
 .div_functioning-order span {
-  background-color: #9747FF;
+  background-color: #9356DC;
 }
 
 .button-exploration-and-command {
-  background: linear-gradient(rgb(219, 112, 223) 50%, #9747FF);
+  background: linear-gradient(#FF79DA 30%, #9356DC);
 }
 
 .div_restaurants-cards .article__span_new,
@@ -939,7 +1092,25 @@ a,
   border: none;
 }
 
+.article__span_new,
+.div_functioning-order p {
+  font-weight: 500;
+}
+
+.div_functioning-order p {
+  white-space: nowrap;
+}
+
 .article-cards__content p {
+  font-weight: 300;
+}
+
+.fa-heart {
+  font-size: 1.5em;
+}
+
+.footer__h1 {
+  font-family: "Shrikhand", serif;
   font-weight: 300;
 }
 

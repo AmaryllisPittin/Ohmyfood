@@ -26,8 +26,10 @@
     <section class="section-prestentation-restaurant section-prestentation-restaurant--long-menu">
         <div class="restaurant_name_and_icon">
             <h1 class="restaurant_name">La note enchantée</h1>
-            <i class="fa-regular fa-heart fa-heart-regular-position"></i>
-            <i class="fa-solid fa-heart fa-heart-solid-position"></i>
+            <span class="all_icons_hearts">
+                <i class="fa-regular fa-heart fa-heart-regular-position"></i>
+                <i class="fa-solid fa-heart fa-heart-solid-position"></i>
+            </span>
         </div>
         <div class="container_menu">
         <h2>ENTRÉES</h2>
@@ -35,11 +37,11 @@
             <div class="food-name-selection food-name-selection-first">
                 <input type="checkbox" id="Checkbox-starter-1" class="Checkbox-menu">
                 <label for="Checkbox-starter-1">
-                    <h3>Ravioles de foie gras</h3>
-                <div class="food-specificity-and-price">
-                    <p class="food-specificity">Accompagnées de leur crème à la truffe</p>
-                    <p class="price">25€</p>
-                </div>
+                    <span class="food-name-selection__title">Ravioles de foie gras</span>
+                <span class="food-specificity-and-price">
+                    <span class="food-specificity">Accompagnées de leur crème à la truffe</span>
+                    <span class="price">25€</span>
+                </span>
                     <span class="food-checked">
                         <i class="fa-solid fa-circle-check"></i>
                     </span>
@@ -48,23 +50,24 @@
             <div class="food-name-selection food-name-selection-second">
                 <input type="checkbox" id="Checkbox-starter-2" class="Checkbox-menu">
                 <label for="Checkbox-starter-2">
-                <h3>Caviar osciètre</h3>
-                <div class="food-specificity-and-price">
-                    <p class="food-specificity">Sur blini à la farine de blé noir</p>
-                    <p class="price">35€</p>
-                </div>
+                <span class="food-name-selection__title">Caviar osciètre</span>
+                <span class="food-specificity-and-price">
+                    <span class="food-specificity">Sur blini à la farine de blé noir</span>
+                    <span class="price">35€</span>
+                </span>
                 <span class="food-checked">
                     <i class="fa-solid fa-circle-check"></i>
                 </span>
+                </label>
             </div>
             <div class="food-name-selection food-name-selection-third">
                 <input type="checkbox" id="Checkbox-starter-3" class="Checkbox-menu">
                 <label for="Checkbox-starter-3">
-                    <h3>Homard et espuma de potiron</h3>
-                    <div class="food-specificity-and-price">
-                        <p class="food-specificity">Marinés aux zestes d'orange</p>
-                        <p class="price">20€</p>
-                    </div>
+                    <span class="food-name-selection__title">Homard et espuma de potiron</span>
+                    <span class="food-specificity-and-price">
+                        <span class="food-specificity">Marinés aux zestes d'orange</span>
+                        <span class="price">20€</span>
+                    </span>
                     <span class="food-checked">
                         <i class="fa-solid fa-circle-check"></i>
                     </span>
@@ -73,11 +76,11 @@
                 <div class="food-name-selection food-name-selection-fourth">
                     <input type="checkbox" id="Checkbox-starter-4" class="Checkbox-menu">
                     <label for="Checkbox-starter-4">
-                    <h3>Foie gras de canard cuit entier</h3>
-                    <div class="food-specificity-and-price">
-                        <p class="food-specificity">Confiture de figue et pain toasté</p>
-                        <p class="price">35€</p>
-                    </div>
+                    <span class="food-name-selection__title">Foie gras de canard cuit entier</span>
+                    <span class="food-specificity-and-price">
+                        <span class="food-specificity">Confiture de figue et pain toasté</span>
+                        <span class="price">35€</span>
+                    </span>
                     <span class="food-checked">
                         <i class="fa-solid fa-circle-check"></i>
                     </span>
@@ -89,11 +92,11 @@
             <div class="food-name-selection food-name-selection-first">
                 <input type="checkbox" id="Checkbox-course-1" class="Checkbox-menu">
                 <label for="Checkbox-course-1">
-                <h3>Noix de coquilles Saint-Jacques</h3>
-                <div class="food-specificity-and-price">
-                    <p class="food-specificity">Sur lit de purée de céleri-rave</p>
-                    <p class="price">40€</p>
-                </div>
+                <span class="food-name-selection__title">Noix de coquilles Saint-Jacques</span>
+                <span class="food-specificity-and-price">
+                    <span class="food-specificity">Sur lit de purée de céleri-rave</span>
+                    <span class="price">40€</span>
+                </span>
                 <span class="food-checked">
                     <i class="fa-solid fa-circle-check"></i>
                 </span>
@@ -102,11 +105,11 @@
             <div class="food-name-selection food-name-selection-second">
                 <input type="checkbox" id="Checkbox-course-2" class="Checkbox-menu">
                 <label for="Checkbox-course-2">
-                <h3>Langoustine poêlée</h3>
-                <div class="food-specificity-and-price">
-                    <p class="food-specificity">Purée de patate douce</p>
-                    <p class="price">35€</p>
-                </div>
+                <span class="food-name-selection__title">Langoustine poêlée</span>
+                <span class="food-specificity-and-price">
+                    <span class="food-specificity">Purée de patate douce</span>
+                    <span class="price">35€</span>
+                </span>
                 <span class="food-checked">
                     <i class="fa-solid fa-circle-check"></i>
                 </span>
@@ -115,11 +118,11 @@
             <div class="food-name-selection food-name-selection-third">
                 <input type="checkbox" id="Checkbox-course-3" class="Checkbox-menu">
                 <label for="Checkbox-course-3">
-                <h3>Mijoté de queue de boeuf</h3>
-                <div class="food-specificity-and-price">
-                    <p class="food-specificity">Et riz sauvage aux zestes de citron</p>
-                    <p class="price">45€</p>
-                </div>
+                <span class="food-name-selection__title">Mijoté de queue de boeuf</span>
+                <span class="food-specificity-and-price">
+                    <span class="food-specificity">Et riz sauvage aux zestes de citron</span>
+                    <span class="price">45€</span>
+                </span>
                 <span class="food-checked">
                     <i class="fa-solid fa-circle-check"></i>
                 </span>
@@ -131,11 +134,11 @@
             <div class="food-name-selection food-name-selection-first">
                 <input type="checkbox" id="Checkbox-dessert-1" class="Checkbox-menu">
                 <label for="Checkbox-dessert-1">
-                <h3>Macaron noisette et chocolat</h3>
-                <div class="food-specificity-and-price">
-                    <p class="food-specificity">Glace au caramel brun et sel de Guérande</p>
-                    <p class="price">18€</p>
-                </div>
+                <span class="food-name-selection__title">Macaron noisette et chocolat</span>
+                <span class="food-specificity-and-price">
+                    <span class="food-specificity">Glace au caramel brun et sel de Guérande</span>
+                    <span class="price">18€</span>
+                </span>
                 <span class="food-checked">
                     <i class="fa-solid fa-circle-check"></i>
                 </span>
@@ -144,11 +147,11 @@
             <div class="food-name-selection food-name-selection-second">
                 <input type="checkbox" id="Checkbox-dessert-2" class="Checkbox-menu">
                 <label for="Checkbox-dessert-2">
-                <h3>Baba au rhum revisité</h3>
-                <div class="food-specificity-and-price">
-                    <p class="food-specificity">Avec son coulis de citron</p>
-                    <p class="price">22€</p>
-                </div>
+                <span class="food-name-selection__title">Baba au rhum revisité</span>
+                <span class="food-specificity-and-price">
+                    <span class="food-specificity">Avec son coulis de citron</span>
+                    <span class="price">22€</span>
+                </span>
                 <span class="food-checked">
                     <i class="fa-solid fa-circle-check"></i>
                 </span>
@@ -157,11 +160,11 @@
             <div class="food-name-selection food-name-selection-third">
                 <input type="checkbox" id="Checkbox-dessert-3" class="Checkbox-menu">
                 <label for="Checkbox-dessert-3">
-                <h3>Tarte au citron meringuée</h3>
-                <div class="food-specificity-and-price">
-                    <p class="food-specificity">Déstructurée</p>
-                    <p class="price">23€</p>
-                </div>
+                <span class="food-name-selection__title">Tarte au citron meringuée</span>
+                <span class="food-specificity-and-price">
+                    <span class="food-specificity">Déstructurée</span>
+                    <span class="price">23€</span>
+                </span>
                 <span class="food-checked">
                     <i class="fa-solid fa-circle-check"></i>
                 </span>

@@ -1,11 +1,23 @@
 $breakpoint-desktop:1024px;
 
+.div_restaurants-cards {
+    @media (min-width:$breakpoint-desktop) {
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
 .header,
 .section_location,
 .section_menu-selection {
     display:flex;
     justify-content:center;
 }
+
+.food-specificity-and-price {
+    justify-content:space-between;
+  }
 
 .section_menu-selection,
 .section_functioning,
@@ -16,7 +28,9 @@ $breakpoint-desktop:1024px;
     flex-direction:column;
 }
 
-.div_functioning-order {
+.div_functioning-order,
+.section_location,
+.food-specificity-and-price {
     display:flex;
     flex-direction:row;
 }
@@ -26,6 +40,12 @@ $breakpoint-desktop:1024px;
     align-items:center;
 }
 
+.section_functioning {
+    @media (min-width:$breakpoint-desktop) {
+        align-items:normal;
+    }
+}
+
 .section_menu-selection {
     text-align:center;
 }
@@ -33,13 +53,16 @@ $breakpoint-desktop:1024px;
 .header,
 .section_location,
 .div_functioning-order span,
-.div_restaurants-cards .article-cards {
+.div_restaurants-cards .article-cards,
+.food-name-selection {
     position:relative;
 }
 
 .div_restaurants-cards .article__span_new,
 .fa-heart,
-.section-prestentation-restaurant {
+.section-prestentation-restaurant,
+.fa-heart-solid-position,
+.fa-heart-regular-position {
     position:absolute;
 }
 
@@ -70,5 +93,8 @@ $breakpoint-desktop:1024px;
 .footer {
     @media (min-width:$breakpoint-desktop) {
         flex-direction:row-reverse;
+        }
+        .footer_all_links {
+            justify-content:flex-end;
         }
     }

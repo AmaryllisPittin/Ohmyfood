@@ -9,7 +9,7 @@
 $main-color:white;
 $second-color: rgb(247,247,247);
 $third-color: #353535;
-$fourth-color:#9747FF;
+$fourth-color:#9356DC;
 
 $main-color-fa-icon: #7E7E7E;
 $second-color-fa-icon:black;
@@ -20,7 +20,7 @@ $main-color-police:black;
 $main-color-box-shadow:rgb(173, 173, 173);
 $second-color-box-shadow:rgb(214, 214, 214);
 
-$main-color-button:linear-gradient(rgb(219, 112, 223) 50%, #9747FF);
+$main-color-button:linear-gradient(#FF79DA 30%, #9356DC);
 
 $main-color-span:#008766;
 $second-color-span:#99E2D0;
@@ -50,7 +50,8 @@ $second-color-span:#99E2D0;
     color: $fourth-color;
 }
 
-.fa-location-dot {
+.fa-location-dot,
+.fa-regular {
     color:$second-color-fa-icon;
 }
 
@@ -70,7 +71,8 @@ $second-color-span:#99E2D0;
 
 /*BACKGROUND-COLOR*/
 
-.article-cards {
+.article-cards,
+.food-name-selection {
     background-color:$main-color;
 }
 
@@ -129,8 +131,26 @@ a,
     border:none;
 }
 
+.article__span_new,
+.div_functioning-order p {
+    font-weight:500;
+}
+
+.div_functioning-order p {
+    white-space:nowrap;
+}
+
 .article-cards__content p {
   font-weight:300;
+}
+
+.fa-heart {
+    font-size:1.5em;
+}
+
+.footer__h1 {
+    font-family: 'Shrikhand', serif;
+    font-weight:300;
 }
 
 /******BOX-SHADOW******/
