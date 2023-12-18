@@ -572,10 +572,6 @@ svg path {
   }
 }
 /***************CHECK-MENU**************/
-.food-specificity {
-  transition: width 0.3s ease-out, overflow 0.3s ease-out, text-overflow 0.3s ease-out;
-}
-
 .food-checked {
   position: absolute;
   top: 0px;
@@ -593,7 +589,7 @@ svg path {
 }
 
 /*****EACH, FOR and IF*****/
-#Checkbox-starter-1::checked ~ label .food-checked {
+#Checkbox-starter-1:checked ~ label .food-checked {
   right: 0;
 }
 
@@ -601,7 +597,7 @@ svg path {
   right: -80px;
 }
 
-#Checkbox-starter-2::checked ~ label .food-checked {
+#Checkbox-starter-2:checked ~ label .food-checked {
   right: 0;
 }
 
@@ -609,7 +605,7 @@ svg path {
   right: -80px;
 }
 
-#Checkbox-starter-3::checked ~ label .food-checked {
+#Checkbox-starter-3:checked ~ label .food-checked {
   right: 0;
 }
 
@@ -617,7 +613,7 @@ svg path {
   right: -80px;
 }
 
-#Checkbox-starter-4::checked ~ label .food-checked {
+#Checkbox-starter-4:checked ~ label .food-checked {
   right: 0;
 }
 
@@ -625,7 +621,7 @@ svg path {
   right: -80px;
 }
 
-#Checkbox-course-1::checked ~ label .food-checked {
+#Checkbox-course-1:checked ~ label .food-checked {
   right: 0;
 }
 
@@ -633,7 +629,7 @@ svg path {
   right: -80px;
 }
 
-#Checkbox-course-2::checked ~ label .food-checked {
+#Checkbox-course-2:checked ~ label .food-checked {
   right: 0;
 }
 
@@ -641,7 +637,7 @@ svg path {
   right: -80px;
 }
 
-#Checkbox-course-3::checked ~ label .food-checked {
+#Checkbox-course-3:checked ~ label .food-checked {
   right: 0;
 }
 
@@ -649,7 +645,7 @@ svg path {
   right: -80px;
 }
 
-#Checkbox-course-4::checked ~ label .food-checked {
+#Checkbox-course-4:checked ~ label .food-checked {
   right: 0;
 }
 
@@ -657,7 +653,7 @@ svg path {
   right: -80px;
 }
 
-#Checkbox-dessert-1::checked ~ label .food-checked {
+#Checkbox-dessert-1:checked ~ label .food-checked {
   right: 0;
 }
 
@@ -665,7 +661,7 @@ svg path {
   right: -80px;
 }
 
-#Checkbox-dessert-2::checked ~ label .food-checked {
+#Checkbox-dessert-2:checked ~ label .food-checked {
   right: 0;
 }
 
@@ -673,7 +669,7 @@ svg path {
   right: -80px;
 }
 
-#Checkbox-dessert-3::checked ~ label .food-checked {
+#Checkbox-dessert-3:checked ~ label .food-checked {
   right: 0;
 }
 
@@ -681,7 +677,7 @@ svg path {
   right: -80px;
 }
 
-#Checkbox-dessert-4::checked ~ label .food-checked {
+#Checkbox-dessert-4:checked ~ label .food-checked {
   right: 0;
 }
 
@@ -844,7 +840,6 @@ svg path {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: width 0.4s ease-out;
 }
 
 #Checkbox-starter-1:checked ~ label .food-specificity {

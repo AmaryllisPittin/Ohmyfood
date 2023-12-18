@@ -215,10 +215,6 @@ svg {
 
 /***************CHECK-MENU**************/ 
 
-.food-specificity {
-    transition:width 0.3s ease-out, overflow 0.3s ease-out, text-overflow 0.3s ease-out;
-}
-
 .food-checked {
     position:absolute;
     top:0px;
@@ -244,7 +240,7 @@ $checkbox-states: checked, unchecked;
 @each $group in $checkbox-groups {
     @for $i from 1 through $checkbox-count {
         @each $state in $checkbox-states {
-            $selector: "#Checkbox-#{$group}-#{$i}:#{if($state == 'checked', ':checked', 'not(:checked)')} ~ label .food-checked";
+            $selector: "#Checkbox-#{$group}-#{$i}:#{if($state == 'checked', 'checked', 'not(:checked)')} ~ label .food-checked";
             $right-value: if($state == 'checked', 0, -80px);
 
             #{$selector} {
@@ -287,7 +283,6 @@ $checkbox-states: checked, unchecked;
     white-space: nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
-    transition: width 0.4s ease-out;
 }
 
 @each $group in $checkbox-groups {

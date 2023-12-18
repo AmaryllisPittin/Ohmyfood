@@ -162,6 +162,7 @@ h2 {
     top:1380px;
     width:100%;
     z-index:1;
+    box-sizing:border-box;
     @media (min-width:$breakpoint-desktop) {
         top:1570px;
     }
